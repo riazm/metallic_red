@@ -1,0 +1,82 @@
+:: StoryTitle
+Metallic Red
+
+
+:: StoryData
+{
+	"ifid": "C46F9332-06A1-47E0-8D6D-79F700724FCE",
+	"format": "Harlowe",
+	"format-version": "3.3.8",
+	"start": "menu screen",
+	"zoom": 1
+}
+
+:: Ship Interior987
+{(set: $shipInterior to "Ship Interior" + (string: $day))(if: $tabs is 0)[The PSV *Metallic Red* has no windows and makes absolutely no sound. (if: $tabs is 0 and $cleanConsole + $cleanGalley + $cleanBathroom is 0)[You decide to do some tidying before you go to bed.
+<p>
+(display: "clean menu")
+]
+(else-if: $cleanConsole is 1 and $cleanGalley is 1 and $cleanBathroom is 1)[You feel tired after cleaning the entire ship. <p>[[Go to bed->sleep intro]]]]
+(else:)[It's day $day in the current local system. The Buraq class Personal Space Vehicle *Metallic Red* has no windows and makes absolutely no sound. You sometimes forget what it looks like from the outside, but internally it's a sequence of rectangular, low ceilinged rooms on a single plane. It's capable of self supported deep space travel for as long as its passengers can handle. It was already several decades old when you purchased it, but you did your best to give it a thorough cleaning and retrofitted as many systems as you could afford. At this point however, it feels more run down than it did on the day you first floated inside. 
+
+<p>There's a [[red light->Check console]] blinking on a display up ahead]
+}
+
+:: Ship Interior988
+It's day $day in the current local system. PSV *Metallic Red* looks a little different since you tidied up last night. There are fewer bits of clutter floating around the rooms, more things tucked away in cargo nets. (if: $exercise is "")[{
+(set: $elliptical to 1)
+(set: $pilates to 1)
+(set: $pingpong to 1)}
+
+The overall effect is pleasing and the new feeling of spaciousness energises you. You wonder if there's a form of exercise that you could do.
+
+[[Try the elliptical->elliptical]]
+[[Strap into the reformer pilates machine->pilates]]
+[[Activate the gravity pad and robo ping pong->pingpong]]](else:)[(if: $eatingpaste is 0)[(set: $eatingpaste to 1)You fill a pouch with paste from the nutrisynth and sip at it absent mindedly to recover from your workout]
+
+(if: $checkhydro is 1)[(display: "hydro blue")
+](if: $tabs > 0)[There's a [[red light->Check console]] blinking on a display up ahead](if: ($checkhydro + $tabs) is 0)[You're tired from your workout and don't feel like staying up anymore.
+
+[[Go to sleep->sleep intro]].
+]]
+
+:: Ship Interior989
+It's day $day in the current local system. PSV *Metallic Red* floats silently in space. (if: $tarotdelivery is not "delivered")[You suspect that once it passes from your hands it'll be decommissioned but you don't mind old things. It's not that you admire the past, more that you prefer to own things that can be taken for granted. If you float through a bulkhead awkwardly and chip some of the paintwork, it's just another chip to be added to the litany of minor damages the craft has sustained over its working life. And the totality of damages is just what the ship is composed of. No one at this point could really imagine what the *Metallic Red* was like when it was new. There's some idea of a smell of new polymers and a lack of blemishes, but a ship like this is already a period piece. When it was first built, the concept of an object without history was entirely different to what it is now, and there's no way to think backwards into what it meant whilst surrounded on all sides by the ship as it currently stands.
+
+There's a [[green light->check deliveries]] flashing on the deliveries station.](else:)[You have to clean out one of your old flasks so that you can refill it with nutrient paste.
+
+(if: $checkhydro is 1)[(display: "hydro blue")
+](if: $tabs >0)[There's a [[red light->Check console]] blinking on a display up ahead.](if: $checkhydro + $tabs is 0)[You don't want to stay up anymore, you want to [[sleep->sleep intro]].
+]]
+
+:: Ship Interior990
+It's day $day in the current local system. PSV *Metallic Red* is silent. (if: $tarotread is 1)[You feel restricted in your sleep sack until you manage to release the cinch straps and float out into the open air. The vague draft of the air recirculation system blows cold against your skin where you've been sweating.
+
+There's a [[tarot deck->read tarot]] floating next to you.](else:)[
+
+(if: $tabs >0)[There's a [[red light->Check console]] blinking on a display up ahead.
+](if: $checkhydro is 1)[(display: "hydro blue")
+](if: $checkhydro + $tabs is 0)[You feel like the rations tastes slightly more pleasant than usual tonight, the nutrisynth is obviously running smoothly. Soon after you finish you decide it's time to [[sleep->sleep intro]].
+]]
+
+:: Ship Interior991
+It's day $day in the current local system. PSV *Metallic Red* makes absolutely no sound.
+
+(if: $orrerydelivery is not "delivered")[There's a [[green light->check deliveries 2]] flashing on the deliveries station.
+](if: $tabs >0)[There's a [[red light->Check console]] blinking on a display up ahead.
+](if: $checkhydro is 1)[(display: "hydro blue")
+](if: $orrerydelivery is "delivered" and $tabs + $checkhydro is 0)[When you go to get your rations from the nutrisynth machine it crashes and you have to restart it. By the time you're done with everything you want to [[sleep->sleep intro]].]
+
+:: Ship Interior992
+It's day $day in the current local system. PSV *Metallic Red* is travelling silently through space.
+
+(if: $tabs >0)[There's a [[red light->Check console]] blinking on a display up ahead.
+](if: $checkhydro is 1)[(display: "hydro blue")
+](if: $checkhydro + $tabs is 0)[(if: $tarotread is 1)[There's a [[tarot deck->read tarot]] floating next to you.
+](else:)[You're ready to [[sleep->sleep intro]].
+]]
+
+:: Ship Interior993
+It's day $day in the current local system. PSV *Metallic Red* seems even more silent than normal. 
+
+There's an [[orange light->site arrival]] blinking on a display up ahead.

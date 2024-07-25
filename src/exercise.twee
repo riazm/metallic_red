@@ -1,0 +1,39 @@
+:: elliptical
+{You put some fun music on, set the elliptical to the easiest setting and begin to glide, 
+(if: $elliptical + $Pilates + $ping pong > 1)[(set: $elliptical to 0)but after a few strides a discordant grinding sound starts to come from the machine. The resistance increases further and further until the arms are barely moving.
+
+<p>You get off to take a look at what's happened. It looks like the resistance function has seized up.
+(if: $pilates is 1 or $pingpong is 1)[<p>]
+(if: $pilates is 1)[[[Strap into the reformer Pilates machine->pilates]]<br>]
+(if: $pingpong is 1)[[[Activate the gravity pad and robo ping pong->pingpong]]<br>]
+](else:)[{(set: $exercise to "elliptical")}it's kind of boring but gets your heart rate up. You think about activating one of the screens so that you can watch some dramas, but you decide you'd rather just glide mindlessly, thinking about nothing. 
+
+<p>[[Return->$shipInterior]]
+]
+}
+
+:: pilates
+{You unfold the reformer Pilates machine from the wall and try to remember your old routine. 
+(if: $elliptical + $pilates + $pingpong >1)[(set: $pilates to 0)You're just getting into it when one of the cables on the machine snags on a pulley, then snaps entirely when you try and free it, the pieces of the mechanism fly out into the ship and ping off various parts of the super structure.
+(if: $elliptical is 1 or $pingpong is 1)[<p>]
+(if: $pingpong is 1)[[[Activate the gravity pad and robo ping pong->pingpong]]<br>]
+(if: $elliptical is 1)[[[Try the elliptical->elliptical]]<br>]
+](else:)[(set: $exercise to "pilates")It's tough. You remember being a lot stronger, but you're comforted by the idea that you'll get back there again if you keep up the practice. By the end of the session you already feel a little more limber
+
+<p>[[Return->$shipInterior]]
+]
+}
+
+:: pingpong
+{You pull the ping pong table from the wall and activate the electromagnets that allow the balls to simulate gravity, 
+(if: $elliptical + $pilates + $pingpong >1)[(set: $pingpong to 0)for some reason no matter how many times you run the callibration the gravity is way too high. The ball plummets to the table almost instantly and refuses to bounce, the bottom of it slightly compressed from the high force.
+(if: $pilates is 1 or $elliptical is 1)[<p>]
+(if: $elliptical is 1)[[[Try the elliptical->elliptical]]<br>]
+(if: $pilates is 1)[[[Strap into the reformer Pilates machine->pilates]]<br>]
+](else:)[(set: $exercise to "pingpong")the ball gun at the other end warms up and starts firing. You lunge from side to side to try and keep up with its relentless pace as the ship's computer keeps score on one of the wall units. Eventually you're exhausted and ask the machine to stop. The score is a tie.
+
+<p>[[Return->$shipInterior]]]
+}
+
+
+

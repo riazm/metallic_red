@@ -1,0 +1,18 @@
+:: read tarot
+(set: $tarotday to "tarot " + (string: $day))(display: $tarotday)(set: $tarotread to 0)
+
+:: tarot 990
+You draw the topmost card: IIII The Emperor. An augmented reality projector turns on and overlays explanatory text on the wall behind the card. Perfect logic, total control, stasis built on a flawed foundation, no reign lasts forever, past momentum is not enough to coast on. 
+
+You decide to [[take a shower->tarot 990 shower]].
+
+:: tarot 990 shower
+You think about the tarot card whilst floating under the low flow sprinkler heads. Every thirty seconds they automatically deactivate to preserve water. You hit the button multiple times to turn them on again.
+
+[[Put the deck away->$shipInterior]].
+
+:: tarot 992
+You draw the topmost card: XXI The World. The projector beams the explanatory text onto the wall. Repayment and return, the final emanation, the circle squared. The beginning was nothing, the end must be nothing too, but a more complete nothing. 
+
+[[Put the deck away->$shipInterior]].
+

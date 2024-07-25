@@ -1,0 +1,81 @@
+:: hydro blue
+(if: $checkhydro is 1)[There's a [[blue light->Check hydro]] blinking on the hydroponics array]
+
+:: age plants
+{[(set: $checkhydro to 0)](set: $hydro to (altered: _plant via _plant + (dm: "age", _plant's age + 24), ...$hydro))
+(for: each _item, ...$hydro)[
+      (if: _item's age > 48 or _item's age > 120)[
+           (set: $checkhydro to 1)
+      ]
+]
+}
+:: Check hydro
+{[(set: $checkhydro to 0)](for: each _item, ...$hydro)[
+      (if: _item's age > 48 or _item's age > 120)[
+           (set: $checkhydro to 1)
+      ]
+]
+}(if: $checkHydroVisted is 0)[(set: $checkHydroVisted to 1)You have a basic hydroponics setup that you got from a younger cousin. They sold it to you when they moved in with their partner, who had a system that was uprated enough to provide for both of them. The plants you grow can be added to the nutrient synthesiser to improve the paste output.] (else:)[(either: "The hydro station gurgles quietly as it shuffles nutrient solution around.", "The hydro stations sits silently.", "The hydro station emits a faint hum.")] (either: "The lightbar radiates a beam of purest white.", "The lightbar throws out light of a purity and intensity that hurts to look at.", "The white tubing shines brightly under the light bar.")(if: $hydro's length is 0)[
+All of the cups in your array are empty
+](else:)[
+
+It currently contains:(for: each _item, ...$hydro)[
+(print: _item's age) hour old (print: _item's name)(if: _item's age > 120)[ which has been left too long and begun [[flowering->Bin the oldest plant]]](else-if: _item's age > 48)[ which is ready to [[harvest->Harvest the oldest plant]]]]]
+
+[[Check nutrient solution]]
+(if: $hydro's length <5)[[[Plant a seed->Choose seed2]]]
+
+[[Return->$shipInterior]]
+(if: $debug is 1)[Debug options:
+(link: "age plants")[(set: $hydro to (altered: _plant via _plant + (dm: "age", _plant's age + 24), ...$hydro))(goto: "Check hydro")]
+(link: "kill a plant")[(set: $hydro to $hydro - (a: $hydro's 1st))(go-to: "Check hydro")]]
+
+:: Choose seed2
+Which seed would you like to plant?
+(for: each _item, ...$seedCatalogue)[(link: _item)[(set: $selectedSeed to _item)(goto: "Plant")]
+]
+
+:: Plant {"position":"250,75","size":"100,100"}
+You tweezer a $selectedSeed seed from the dispenser and gently squash it into some moistened rockwool, {(if: $hydro's length < 5)[then you press the assemblage into one of the empty pods.
+(set: $newPlant to (dm:
+	"name", $selectedSeed,
+	"health", 7,
+	"age", 0
+))(set: $hydro to $hydro + (a: $newPlant))
+]}
+
+[[Return->Check hydro]]
+
+:: Check nutrient solution {"position":"550,75","size":"100,100"}
+(either: "There is a slight algae green tint on the viewer screen but the nutrient levels seem fine.", "The pH has gone slightly acidic so you add a small amount of potassium hydroxide from a dropper bottle you keep velcroed to the station.", "The pH has gone alkaline, you refill the pH UP tank so that the system can dispense more into the plants.", "The system indicates that nutrient levels have dropped, but that it's compensating automatically.", "The viewer screen seems faint, but otherwise the hydroponics system looks to be running optimally", "Everything seems fine. You idly scroll through some of the manual options that the system offers.")
+
+[[Return->Check hydro]]
+
+:: Harvest the oldest plant
+You keep a pair of secateurs carabinered next to your hydro set up. You unclip it and flip the blade release.
+
+You strip the young leaves off the plant and feed them to the nutrient synth unit. For the next few days you'll have added B vitamins, iron and folate in your rations.{
+(set: $hydro to $hydro - (a: $hydro's 1st))
+(set: $nutrisynth to $nutrisynth + 3)
+(if: $nutrisynth > 10)[(set: $nutrisynth to 10)]
+}
+
+[[Return->Check hydro]]
+
+:: Bin the oldest plant
+The oldest plant has been left too long and begun flowering. It's pretty, but if you add it to the nutrisynth it would make everything taste unbearably bitter. You seal it into the bin.(set: $hydro to $hydro - (a: $hydro's 1st))
+
+[[Return->Check hydro]]
+
+:: Check syn unit
+The synth unit is the newest thing on your ship and stands out from everything else by virtue of its ugly blue shell, which has a vibrancy that doesn't match anything in the room in tone or luminosity. You hated it when you picked it out but you have to buy a new one every hundred cycles or so because you never clean them regularly. You would make do without one, but you have to eat to stay alive. The readout says:
+
+{
+(font: "Courier New")[
+(if: $nutrisynth < 3)[Your AhmedIncorporated NUTRITIONAL SYNTHESISER is outputting BELOW STANDARD nutritional substrate! Your needs are being met.]
+(else-if: $nutrisynth <= 7)[Your AhmedIncorporated NUTRITIONAL SYNTHESISER is outputting STANDARD nutritional substrate! Your needs are being met in the most efficient way possible!]
+(else-if: $nutrisynth > 7)[Your AhmedIncorporated NUTRITIONAL SYNTHESISER is outputting HIGH PERFORMANCE nutritional substrate! Your needs are being exceeded.]
+]
+}
+
+[[Ship Interior]]

@@ -1,0 +1,150 @@
+:: Lobby
+{(set: $northText to "")
+(set: $eastText to "Recreational")
+(set: $location to "Lobby")
+(set: $westText to "Upper Landing")
+(set: $southText to "")
+}You're at the entrance to the site, like the tunnel you followed to get here it has been mechanically carved out of solid rock, but it's larger and rectangular. The floor is solid, there's no more gravel. A row of robes identical to the one you're wearing are hung from the wall.
+
+:: Recreational
+{(set: $northText to "Dormitory")
+(set: $eastText to "Hydroponic grow room")
+(set: $location to "Recreational")
+(set: $westText to "Gym")
+(set: $southText to "Lobby")
+}You're inside the main living quarters on site. There's a large bookshelf on the wall and a few consoles with display units. The rest of the room is taken up by some communal floor couches. (if: $siteState is "preDinner")[A pair of younger initiates are gathered around one of the display units.](if: $siteState is "postDinner")[Groups of initiates who don't want to go to sleep are lying on some of the couches, talking.](if: (history:) contains "Laurel conversation 2")[(set: $laurelConvo to 1)](else:)[(set: $laurelConvo to 0)](if: $exploredNorth + $exploredDining + $exploredGym + $exploredUnderground is 4 and $laurelConvo is 0)[
+
+You're examining the volumes on the bookshelf when you hear a shuffling behind you. It's the initiate who met you at the cave entrance. You notice they have a tattoo of a laurel leaf behind their left ear. 
+
+[["Is the hierophant ready to see me?"->Laurel conversation 1]]
+[["When can I enter the great hall?"->Laurel conversation 1]]]
+
+:: Recreational exits
+There are exits to the [[East->Hydroponic grow room]] (if: $exploredDining is 0)[(unexplored) ]towards hydroponics, the kitchen and dining rooms, [[West->Gym]] (if: $exploredGym is 0)[(unexplored) ]to the gym, [[North->Dormitory]] (if: $exploredNorth is 0)[(unexplored) ]to the sleeping quarters, and [[South->Lobby]] (if: $exploredUnderground is 0)[(unexplored) ]back to the initiate entrance where you can descend towards the Great Hall.
+
+:: Dormitory
+{(set: $northText to "")
+(set: $eastText to "")
+(set: $location to "Dormitory")
+(set: $westText to "")
+(set: $southText to "Recreational")
+
+
+(set: $exploredNorth to 1)}There are several bunk beds here. (if: $siteState is "morning")[Clearly you're the last person to wake up, all of the other beds have been made and tidied.](if: $siteState is "preDinner")[Most have a scattering of personal effects or a dent in the pillow indicating that they are occupied.
+
+There's a robed initiate lying on one of the bunks reading, they give you a slow, kingly nod when you walk in then go back to their book.](else-if: $siteState is "postDinner")[The room has filled up, people are slouching around in their night clothes, carrying their toiletries and getting ready for bed.
+
+The bunk you normally slept in is free.
+
+[[Go to bed->sleep site]]]
+
+:: Hydroponics
+{(set: $northText to "Workshop")
+(set: $eastText to "Kitchen")
+(set: $location to "Hydroponics")
+(set: $westText to "Recreational")
+(set: $southText to "")
+
+
+}You're inside the hydroponics room, a much larger and more brightly lit chamber than most of the others on the site. Plants and even some smaller trees sit in large beds of gravel that appears to be made of the same stone as the walls of the cave complex. Probably leftover aggregate from construction of the site. The room smells damp, like a river bed.(if: $siteState is "preDinner")[
+
+The lights above are blindingly bright and clear. If you look up through the canopy of a nearby lemon tree and close your eyes, you could believe you're on earth somewhere.](if: $siteState is "postDinner")[
+
+The lights have been turned low to simulate night. You can hear a faint gurgle as the growth solutions are filtered for algae.](if: $siteState is "morning")[
+
+The lights seem even brighter than they did yesterday.]
+
+:: Workshop
+{(set: $northText to "")
+(set: $eastText to "")
+(set: $location to "Workshop")
+(set: $westText to "")
+(set: $southText to "Hydroponics")
+
+
+}You're inside the workshops. The room is filled with fabricators and roboateliers sitting neatly on workbenches. Tools are obsessively organised on gridded pegboards stuck to the bare cave walls. There are smaller hatches leading from the room which you assume are used by maintenance robots.
+
+The only exit is to the [[South->Hydroponics]], where you entered from.
+
+:: Kitchen
+{(set: $northText to "Dining")
+(set: $eastText to "")
+(set: $location to "Kitchen")
+(set: $westText to "Hydroponics")
+(set: $southText to "")
+(if: $kitchenState is 0)[(set: $kitchenState to "areemBusy")]}(if: $kitchenState is "quietMorning")[You're inside the kitchen. Everything has been cleaned, wiped and put away. The metal worktops are so spotless you can see the myriad scratches they've accumulated over the years. Everything smells faintly like bleach and glows softly. The lights are off.](else-if: $kitchenState is "tidyingBegins")[You're inside the kitchen. The room is still busy, but the pace of activity has decreased as plates are scraped and worktops sprayed down.](else:)[You're inside the kitchen. The room is filled with steel worktops and cabinets, initiates with the sleeves of their robes pushed up are preparing dinner. There's noise and heat all over. ](if: $kitchenState is "talkToAreem")[
+
+Your old friend Areem is here, stirring a pan of onions.
+
+[[Talk to Areem->Areem conversation 1]]](else-if: $kitchenState is "areemBusy")[
+
+You recognise Areem, the head chef but they don't notice you as they're helping someone learn how to dice an onion.](else-if: $kitchenState is "serveDressing")[
+
+The bowl of (link: "salad dressing")[(set: $diningState to "serveDressing")(set: $kitchenState to "gotDressing")(goto: "Kitchen pickup")] you made is here.]
+
+:: Kitchen pickup
+You pickup the bowl of dressing.
+
+(display: "Kitchen")
+
+:: Dining
+{(set: $northText to "")
+(set: $eastText to "")
+(set: $location to "")
+(set: $westText to "")
+(set: $southText to "Kitchen")}(if: $diningState is "serveDressing")[The lights have been turned on and robed initiates are either sitting down at their benches, or rushing in and out of the room bringing in pots and large dishes. Someone grabs the salad dressing from you and decants it into several smaller containers, which are then picked up by several other initiates and distributed around.
+
+With your hands now empty you see little else to do except sit down. Several groups have formed at the tables, but you don't see anyone you recognise. A group of more senior Perses in the corner might be acquaintances of your father but you don't feel like fielding the kind of conversations they'll want to have. You sit down at the table nearest to yourself and help yourself to a sour cherry from the bowl on the table.
+
+[[Eat the cherry->Dining intro]]](else-if: $diningState is "kitchenShift")[The room has largely emptied, the only table still lively is the one with the kitchen shift, who are just getting started on the remains of the first course.](else-if: $diningState is "morning")[The dining room is empty. You must have slept through breakfast because everything has been put away.](else:)[There are several large tables with benches in the dining room, but the lights are off. Dinner probably won't be served for a little while.](set: $exploredDining to 1)
+
+:: Gym
+{(set: $northText to "")
+(set: $eastText to "Recreational")
+(set: $location to "Gym")
+(set: $westText to "")
+(set: $southText to "Kitchen")}The site gym is mostly focused on bodyweight equipment with a few cardio machines. Pilates mats and rubber resistance bands are hung up on the wall. (if: $siteState is "preDinner")[Someone you don't recognise is spinning out a leisurely pace on a stationary bike.](else-if: $siteState is "postDinner")[Someone is doing a slow yoga routine to prepare for bed.]
+
+:: Upper Landing
+{(set: $northText to "Staircase")
+(set: $eastText to "")
+(set: $location to "Upper Landing")
+(set: $westText to "")
+(set: $southText to "Lobby")}You're in a small ante chamber. It's poorly lit but you can make out text etched into the rock:
+
+"No uninitiated may pass into the Great Hall."(if: $siteState is "morning")[
+
+The floor has been freshly mopped by one of the cleaning robots.]
+
+:: Staircase
+{(set: $northText to "Corridor")
+(set: $eastText to "")
+(set: $location to "Staircase")
+(set: $westText to "")
+(set: $southText to "Upper Landing")}You're in a dark staircase. The steps themselves have been cut out of the rock directly and polished smooth. (if: $siteState is "morning")[](else:)[The ceiling is quite low and you feel at permanent risk of bumping into it.]
+
+:: Corridor
+{(set: $northText to "Great Hall")
+(set: $eastText to "Hierophant's Chambers")
+(set: $location to "")
+(set: $westText to "")
+(set: $southText to "Staircase")}You're in a dark corridor with a double height ceiling.
+
+To the North there are double doors set in a huge arch. To the East is a normal sized door. (if: $siteState is "preDinner")[In the darkness you can see a crack of light shining underneath the door to the east.](if: $siteState is "morning")[You can vaguely hear sound and commotion coming from inside the Great Hall]
+
+:: Great Hall
+{(set: $northText to "")
+(set: $eastText to "")
+(set: $location to "Great Hall")
+(set: $westText to "")
+(set: $southText to "Corridor")}(if: $siteState is "morning")[You can hear the noise of a communal meeting happening in the Great Hall. Presumably that's where everyone is this morning.](else:)[Each one of the double doors is wider than you are tall and suspended on huge hinges. There's a bolt across both of them which is locked in place.]
+
+:: Hierophant's Chambers
+{(set: $northText to "")
+(set: $eastText to "")
+(set: $location to "")
+(set: $westText to "Corridor")
+(set: $southText to "")}(set: $exploredUnderground to 1)(if: $siteState is "preDinner")[As you approach the door you hear voices behind it. The one of them you recognise, the oddly accented initiate who met you at the entrance to the site. You assume the one you don't recognise is the new Hierophant. They're discussing minor administrative issues. You don't really feel like interrupting.](else-if: $siteState is "postDinner")[The light under the office door is gone. The Hierophant has his own quarters behind his office, not that you've ever seen them.](if: $siteState is "morning")[You can hear small sounds coming from inside the Hierophant's office.
+
+[[Knock->Hierophant 1]]]
+

@@ -1,0 +1,114 @@
+:: check deliveries [console]
+(if: $tarotdelivery is "ftl")[Your FTL SubSpacePOST trajectory has been calculated and locked in. Please do not alter your bearing whilst we complete the transfer. Are you ready to receive?]
+(if: $tarotdelivery is "roboatelier")[Your Local RoboAtelier has downloaded construction plans for your recent purchase. Are you ready to assemble?]
+
+- [[Yes->receive delivery tarot]]
+- [[No->$shipInterior]]
+
+:: receive delivery tarot [console]
+(if: $tarotdelivery is "ftl")[Local system mass driver Antigone-B1 is preparing to send your parcel... (live: 1s)[Ready(stop:)]
+Payload launch... (live: 3s)[Success(stop:)]
+Trajectory Check... (live:4.5s)[OK(stop:)]
+Payload arrival... (live: 5s)[[7.34s]<eta|(stop:)] {
+(live: 7s)[
+       (replace: ?eta)[5.49s]
+       (stop:)
+]
+(live: 10s)[
+       (replace: ?eta)[2.11s]
+       (stop:)
+]
+(live: 12s)[
+       (replace: ?eta)[0.31s]
+       (stop:)
+]
+(live: 14s)[
+       (replace: ?eta)[Delivered]
+       (stop:)
+]
+}]
+(if: $tarotdelivery is "roboatelier")[Local RoboAtelier Ismene@MetallicRedDomestic is preparing to construct your recent purchase... (live: 1s)[Ready(stop:)]
+Printing components... (live: 3s)[Success(stop:)]
+Applying finishes... (live: 4.5s)[Success(stop:)]
+Final assembly... (live: 5s)[[7.34s]<eta|(stop:)] {
+(live: 7s)[
+       (replace: ?eta)[5.49s]
+       (stop:)
+]
+(live: 10s)[
+       (replace: ?eta)[2.11s]
+       (stop:)
+]
+(live: 12s)[
+       (replace: ?eta)[0.31s]
+       (stop:)
+]
+(live: 14s)[
+       (replace: ?eta)[Success]
+       (stop:)
+]
+}]
+(live: 15s)[[[Please retrieve your novel object->tarot retrieval]]]
+
+:: tarot retrieval
+You pull yourself away from the console and float down ship towards the (if: $tarotdelivery is "roboatelier")[RoboAtelier](else:)[parcel airlock]. Your new tarot deck is boxed and present (if: $tarotdelivery is "roboatelier")[in the center of the construction stage](else:)[on the new arrivals deck]. It(if: $tarotdelivery is "roboatelier")['s still warm to the touch](else:)[ smells slightly of welding fumes]. (set: $tarotdelivery to "delivered")
+
+[[Pick it up->$shipInterior]]
+
+:: check deliveries 2 [console]
+Your FTL SubSpacePOST trajectory has been calculated and locked in. Please do not alter your bearing whilst we complete the transfer. Are you ready to receive?
+
+- [[Yes->receive delivery]]
+- [[No->$shipInterior]]
+
+:: receive delivery [console]
+Local system mass driver Antigone-G12 is preparing to send your parcel... (live: 1s)[Ready(stop:)]
+Payload launch... (live: 3s)[Success(stop:)]
+Trajectory Check... (live:4.5s)[OK(stop:)]
+Payload arrival... (live: 5s)[[8.10s]<eta|(stop:)] {
+(live: 8s)[
+       (replace: ?eta)[4.89s]
+       (stop:)
+]
+(live: 10s)[
+       (replace: ?eta)[2.34s]
+       (stop:)
+]
+(live: 11s)[
+       (replace: ?eta)[0.39s]
+       (stop:)
+]
+(live: 13s)[
+       (replace: ?eta)[Delivered]
+       (stop:)
+]
+}
+(live: 14s)[[[Please retrieve your novel object->orrery retrieval]]]
+
+:: orrery retrieval
+The sound of the new parcel being shunted through the airlock transmits through the bulkhead as a low vibration and you feel the craft reorient itself away from the collection heading. You float down ship to the open parcel airlock. A brown box with the address glyph of the *Metallic Red* is waiting for you. You don't remember ordering anything.
+
+[[Open the box->orrery opening]]
+
+:: orrery opening
+Inside is a rectangular cuboid constructed from several layers of transparent polycarbonate. The layers are connected by dark bronze pins and within them are several finely machined mechanical gears made from the same metal. It looks like a mechanical clock, but instead of a traditional clock face there are concentric dials and seven hands, each with a differently coloured stone at the tip. On the back there are several more dials. A large handle sticks out from one of the sides.
+
+[[Turn the handle->orrery operating]]
+
+:: orrery operating
+As you turn the handle you watch the seven hands rotate at different rates. The internal gearing spins wildly. The ship's projector turns on and informs you that the  device is a mechanical orrery, presumably a replica of an ancient mechanism given the presence of only seven planets. The hands represent different planets, the millions of kilometers of their orbits miniaturised to a few centimeters across. You keep turning. You notice that the dials are written in Greek but you can make out the symbols of the zodiac on one of the faces and numbers which correspond to Earth solar dates on another. The gears make a slithering, ticking sound as you rotate the system idly.
+
+[[Check the box for a note->orrery note]]
+
+:: orrery note
+Inside the box is a standard shipping invoice that says the orrery was dispatched from an automated production facility orbiting nearby. It looks like it was incorrectly handled by the shipping system and delivered to you by mistake. You feel slightly put out. You never wanted an orrery before now but now that you have one you don't want to send it back, though you could obviously buy your own. The cost mentioned on the invoice is insignificant. You set the date on the back of the orrery to what you think is current and begin winding it backwards. 
+
+[[Keep turning->orrery birthday]]
+
+:: orrery birthday
+The planetary dials continue to rotate, various dates appear and you notice how few of them hold any particular significance to you. You note the date you started your current journey, then new years, which you remember spending with friends, further back to your last birthday. You keep spinning, back to your university days, to your childhood, to the day of your birth, then further back, your parents' birthdays, their parents'. The planets continue to rotate impartially. You move backward to a time where you have only vague historical references, old wars, nations, kings. Though you have no connection to them you consider that your ancestors were alive then also, doing whatever they were doing, all of which in some subtle way helped bring you to the here and now, holding a misdelivered orrery in deep space.
+
+You ask the ship to liase with the production facility to see if you're required to return the orrery. The answer comes back instantly that it won't be necessary and they apologise for any inconvenience. The orrery is yours now. You tuck it into some webbing. (set: $orrerydelivery to "delivered")
+
+[[Return->$shipInterior]]
+

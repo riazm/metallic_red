@@ -1,0 +1,11 @@
+:: Laurel conversation 1
+"I'm afraid the hierophant needs more time to consider your presence here." they say in a low voice, as though it's a secret. "For now please eat with us. We can talk further tomorrow."
+
+[["Is there anything I can do?"->Laurel conversation 2]]
+
+:: Laurel conversation 2
+"I'm sure, speak with Areem in the kitchen."(set: $kitchenState to "talkToAreem")
+
+They hustle off down the corridor, leaving you standing in the living quarters 
+
+(display: "Living quarters exits")

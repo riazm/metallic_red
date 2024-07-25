@@ -1,0 +1,97 @@
+:: initialising passage [startup] {"position":"25,200","size":"100,100"}
+{
+(set: $tabs to 4)
+(set: $hour to 0)
+(set: $day to 987)
+(set: $hydro to (a:))
+(set: $nutrisynth to 7)
+(set: $seedCatalogue to (a: "Chard", "Mizuna", "Shungiku", "Mitsuba", "Tatsoi"))
+(set: $chard to (dm:
+	"name", "Chard",
+	"health", 4,
+	"age", 300
+))
+(set: $hydro to $hydro + (a: $chard))
+(set: $mizuna to (dm:
+	"name", "Mizuna",
+	"health", 4,
+	"age", 0
+))
+(set: $hydro to $hydro + (a: $mizuna))
+(set: $vibe to "neutral")
+(set: $preventclose to false)
+
+
+(set: $location to "")
+
+(set: $northText to "")
+(set: $westText to "")
+(set: $eastText to "")
+(set: $southText to "")
+
+}
+
+:: menu screen
+
+Metallic Red v0.01
+
+[[Start->Ship Interior987]]
+
+[[Chapter Select]]
+
+[[Credits]]
+
+:: before playing
+Hello! Thank you for playing the early version of my game!
+
+- There's no way to lose the game, and there's no gatekept content, so don't worry whilst playing, if you get stuck please let me know as it's probably a bug.
+
+- Similarly if you get to a point where you are really aware you're playing a game and you're just hammering links without reading things, let me know when this happened so I can check out the pacing.
+
+- If there's any obvious problems like typos, bugs, passages not making sense etc I would also like to know.
+
+- There's a tiny google forms survey at the end where I try to extract a bit more information from you, it would be useful if you filled me in!
+
+:: Chapter Select
+Click to start on a different day., only 987 and 993 work
+
+Ship
+(link: "Day 987")[(goto: "Ship Interior987")]
+(link: "Day 988")[(set: $tabs to 4)(set: $day to "987")(display: "morning")(goto: "Ship interior988")]
+(link: "Day 989")[(set: $tabs to 3)(set: $day to "988")(display: "morning")(goto: "Ship Interior989")]
+(link: "Day 990")[(set: $tabs to 3)(set: $day to "989")(display: "morning")(goto: "Ship Interior990")]
+(link: "Day 991")[(set: $tabs to 3)(set: $day to "990")(display: "morning")(goto: "Ship Interior991")]
+(link: "Day 992")[(set: $tabs to 3)(set: $day to "991")(display: "morning")(goto: "Ship Interior992")]
+
+Site
+[[Day 993->site arrival]]
+[[Lobby]]
+[[Salad Dressing->Dressing intro]]
+
+:: ideas
+Early on add more stuff about the ship, introduce the nutrisynth and the hydroponics station
+an email from your friend pernilla saying she's never felt like she was out of control in that way
+dream about snakes
+
+Add part 1 part 2 separation and chapter selection
+
+Need to add the hydroponics system earlier
+
+Need to make it clear you're eating paste
+
+Move some of the early console days to later days or add new entries
+
+992 is the awaken to the site day
+
+<!--This loads the east/north/south/west/ text into the sidebar-->
+
+:: Sidebar [footer]
+(append: ?SideBar)[\
+east [[$eastText]]
+north [[$northText]]
+current $location
+south [[$southText]]
+west [[$westText]]
+]
+
+

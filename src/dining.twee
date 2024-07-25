@@ -1,0 +1,25 @@
+:: Dining intro
+You bite carefully into the cherry, it's incredibly sour and slightly mushy from dethawing but it's probably the first piece of fruit you've eaten in months. Around you dishes from the kitchen are being laid out and initiates are taking their places. The three initiates who you've sat next to are happily talking amongst themselves. The one next to you has both ears pierced and large gold hoops hanging from each ear, the one across from you has manipulated the hood of their robe so that it rakishly frames their face, the one diagonal from you seems shrunken into themselves, like they're ill or cold. They're talking about altering the fabric make up for robe fabrication.
+
+The first course is a tempeh salad, with spinach, sweet peppers, cabbage and the peanut salad dressing you made.
+
+[[Eat the salad->Dining salad]]
+
+:: Dining salad
+Everybody seem to be enjoying the salad, or at the least you don't hear anybody complain about the dressing. The initiates around you are now talking about tonsure. You catch the eye of the one with the dramatically manipulated hood and smile. They smile back.  
+
+The second course is biang biang noodles with chopped mushrooms and pak choi and a nice spicy chilli oil.
+
+[[Eat the noodles->Dining second course]]
+
+:: Dining second course
+The noodles are more filling than you expect. After months of nutrient paste you have slightly lost track of how much food you normally like to eat. The initiate with the large hooped earrings accidentally spills some water and goes to get some towels to clean up the puddle which spreads to the edge of the table and drips down.
+
+The dessert is cardamom sticky rice with a blueberry compote.
+
+[[Eat the sticky rice->Dining dessert]]
+
+:: Dining dessert
+The sunken in initiate offers to dish out some sticky rice for you. They brandish slightly larger spoonfuls than you might have requested, but you don't mind spending a bit of extra time to finish your portion. People start tidying up almost immediately. You find yourself carrying a stack of plates into the kitchen and leaving them by an initiate that's methodically loading the dishwasher. They nod at you.(set: $siteState to "postDinner")(set: $kitchenState to "tidyingBegins")(set: $diningState to "kitchenShift")
+
+(display: "Kitchen exits")

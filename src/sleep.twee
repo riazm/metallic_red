@@ -1,0 +1,258 @@
+:: sleepscore
+(set: $sleepscore to $tabs + $checkhydro)
+
+:: morning
+{(set: $day to $day+1)
+(set: $exercise to "")
+(set: $shipInterior to "Ship Interior" + (string: $day))
+(set: $tarotread to 1)
+(display: "age plants")
+(set: $eatingpaste to 0)}
+
+:: sleep intro
+(set: $dreampassage to "sleep" + (str: $day))You cinch down the belts on your sleeping sack (either: "tightly", "gently") and turn the light cycle to (either: "nocturnal", "twilight"). (either:"Sleep comes quickly.", "You float there for a while before passing out.", "You feel wide awake so you read for a while before turning in.", "You barely have time to think before you go under." ) (live: 3s)[(go-to: $dreampassage)]
+
+:: sleep987 [sleep]
+You're in your childhood home. It's high summer. You are a child. You walk through a familiar door that opens onto the [[street->sleep987 street]] in front of your house. 
+
+:: sleep987 street [sleep]
+The street stretches out infinitely in either direction, longer than you remember, but directly in front of you is a steel latticed structure taller than any building on the road. The base of the lattice spreads across both sides of the street and onto the pavement. You begin to look up, your eye following the structure into the clear sky. It's an [[electricity pylon->sleep987_1]].
+
+:: sleep987_1 [sleep]
+In the dream this is just how tall a pylon is and always has been, but if pylons this large existed in reality they would dwarf skyscrapers. The top of the pylon it is so distant that you can't make out any of the high voltage wires that connect it to the other pylons you've noticed, which are all just as tall. A tiny white object, maybe a plane at cruising altitude is the only other object in the [[sky->sleep987_2]].
+
+:: sleep987_2 [sleep]
+{(set: $tabs to 4)
+(display: "morning")}The pylon itself is not electrified, and there is no danger from touching it, but as you reach out your hand towards one of the steel cross beams you feel as though a charge is building in the air around you. Your hair begins to stand up, and you hear a humming, with great trepidation the very tip of your [[finger->awaken 987]] touches the pylon.
+
+:: awaken 987
+You wake with a jolt.
+
+(display: $shipInterior)
+
+:: sleep988 [sleep]
+You're in front of a vending machine. Your eyes sweep over the replica display cans, they are all variations of Coke and Pepsi. In your mind you realise that this is a very rare vending machine because it contains both Coca Cola and Pepsico products. You remember reading about it or hearing about or being told about it, a collaboration between two famous rivals. You have to choose between [[Coke->sleep988 coke]] and [[Pepsi->sleep988 pepsi]].
+
+:: sleep988 pepsi [sleep]
+(set: $beverage to "Pepsi")You wave your card above the payment reader and tap the Pepsi symbol. There's a hissing sound from inside the machine, the sound of a high powered transformer warming up, reaching a crescendo and then instantly cutting off. A small door opens to reveal a can of $beverage in the can collection slot. You reach for the [[can->sleep988 taken]].
+
+:: sleep988 coke [sleep]
+(set: $beverage to "Coke")You press your card firmly against the payment reader and palm the Coke symbol. There's a whirring sound from inside the machine, a physical motor runs, clunks and then clunks again. A can of $beverage drops into the can collection slot. You reach for the [[can->sleep988 taken]].
+
+:: sleep988 taken [sleep]
+You effortlessly crack open the $beverage can, hearing the familiar sound but feeling no resistance from the ring pull. You realise that you're extremely thirsty. You raise the can to your lips and throw your head back. Nothing happens. The liquid doesn't seem to move. You move it away from your lips and raise it to your [[eye->sleep988 look]].
+
+:: sleep988 look [sleep]
+There's something [[in there->sleep988 look closer]].
+
+:: sleep988 look closer [sleep]
+As you look into the darkened hole the weight of the can shifts towards you abruptly and you drop it on the floor. A thick, black, oily liquid begins to leak out. You go to kick the [[can->awaken 988]]{
+(set: $tabs to 4)
+(display: "morning")
+} away.
+
+:: awaken 988
+As your foot contacts the can you realise you're dreaming and begin to drift to consciousness.
+
+(display: $shipInterior)
+
+:: sleep989 [sleep]
+You are in the PSV *Metallic Red* trying to fix the nutrisynth machine. Your hand is deep inside it at an awkward angle, trying to screw a bolt back on. The bolt keeps on feeling like it's connecting, but then falls off and you have to stretch even more awkwardly to pick it up to try again. But it keeps falling off. You stretch further and [[try again->sleep989 again]].
+
+:: sleep989 again [sleep]
+This time you are sure that the thread has caught, but when you go to spin the bolt down it snags prematurely. The threads are crossed and a feeling of panic shoots through you. If the threads have crossed then maybe you've done permanent damage to the unit. If you can't fix it you'll run out of food within 14 days. You'll need to plot a course back home. Your fingers are sweating as you try to free the [[bolt->sleep989 free]].
+
+:: sleep989 free [sleep]
+You are in the PSV *Metallic Red*. There's a repeated banging sound coming from somewhere. Like someone is hammering on a pipe. You try to locate the sound. It's coming from one of the external bulkheads. You put your hand on the bulkhead and feel the vibration caused by the banging. The PSV *Metallic Red* has no windows, but proximity alarms should trigger if anything comes within one thousand kilometers of the hull, automated evasive action should trigger if anything comes closer than that. You [[check->sleep989 computer]] the ship's computer.
+
+:: sleep989 computer [sleep]
+You are in the PSV *Metallic Red*. Proximity alarms that you have never heard before are blaring, nearly deafening you, but over the tumult of the rise and fall you can still hear the banging on the ship's hull. The debris and potential impact report on the ship's computer says that a human sized object originating in dark space outside of the local group has been on a collision trajectory for the past 13 minutes. The banging on the hull is louder now. You look up from the computer and see the hull begin to dent and deform. You'll have to attempt to fix the {(set: $tarotread to 0)
+(set: $tabs to 3)
+(display: "morning")
+} [[hull->awaken989]].
+
+:: awaken989
+You wake up with a nagging feeling that you're meant to be doing something.
+
+(display: $shipInterior)
+
+:: sleep990 [sleep]
+You are sitting in the passenger seat of the PSV *Metallic Red*. Your father is in the pilot's seat next to you with the harness disconnected and hanging loose. A brown paper bag is on the console between you with a smell of fast food coming from it. Your father is eating a burger. The ship is planetside and the airlock is disengaged with light streaming through it. You're terrified because he never let you eat gravity food in any of the PSVs he piloted, whether they were landed or not.
+
+"I think it'll be fine to eat in this one time." your father says, reading your mind whilst chewing on his burger. "I think this craft can take it."
+
+Take a [[bite->sleep990 burger]] of your burger or try to [[say->sleep990 talk]] something.
+
+:: sleep990 burger [sleep]
+You take a bite of the burger you realise is in your hands. The contents slide around inside the bun.
+
+You watch him take another bite and a bit of sauce covered onion escapes the disintigrating bun and falls onto the flight console.
+
+Try to [[clean->sleep990 clean]] the console or ask why he's making a [[mess->sleep990 mess]]
+
+:: sleep990 talk [sleep]
+"You would never let us eat in your ship," you say.
+
+You feel a level of physical annoyance that you can't convey with your words. Your father shrugs.
+
+"This isn't my craft." he says.
+
+You watch him take another bite, a bit of sauce covered onion escapes the disintigrating bun and falls onto the flight console.
+
+Try to [[clean->sleep990 clean]] the console or ask why he's making a [[mess->sleep990 mess]]
+
+:: sleep990 clean [sleep]
+You grab a spare napkin and try to wipe away the onion and sauce from the console. Everything just smears around, as though the napkin itself was already covered in sauce. you hear your father speaking behind you.
+
+"Why try to clean it, this ship won't fly again."
+
+Ignore him and [[keep->sleep990 clean2]] cleaning or tell [[him->sleep990 fly again]] it willl
+
+:: sleep990 mess [sleep]
+"What are you doing?" you say, the words tumble out of your mouth before you can even really form them. "Why are you making a mess?"
+
+"This ship won't fly again." he says.
+
+Ignore him and [[keep->sleep990 clean2]] cleaning or tell him [[it will->sleep990 fly again]].
+
+:: sleep990 clean2 [sleep]
+You try to clean the console, furiously rubbing at it with the napkin. The more you clean the more you realise how dirty it is, there are bits of burger, salt from fries, sauce sachets, and greasy wrappers all over. As you cast your eyes around more and more bits of detritus appear.
+
+You get up and walk towards the open [[airlock->sleep990 airlock]].
+
+:: sleep990 fly again [sleep]
+"Yes it will." you say. "Of course it will."
+
+Your father seems totally unbothered and keeps chewing his burger. He doesn't seem to react in any way. You want to shake him. Instead you walk towards the open [[airlock->sleep990 airlock]].
+
+:: sleep990 airlock [sleep]
+Light is pouring through the airlock into the dim ship interior. Maybe the first time that light has shone into the windowless PSV *Metallic Red* in decades. You reach the airlock and look outside. The piercingly bright light is overwhelming, but when your eyes adjust you look out at a pastoral landscape of green fields and hegerows. You turn back to look at your father, sitting in the pilot's seat and turned away from you. You cannot see his face.
+{
+(set: $tabs to 3)
+(display: "morning")
+}<p>You try to [[call->awaken 990]] out to him.
+
+:: awaken 990
+You wake up with your voice catching in your throat.
+
+(display: $shipInterior)
+
+:: sleep991 [sleep]
+It's the day of your initiation and you've slept in. You should have been at the Great Hall one day ago. You're moving through the site in a frenzy, trying to get your things together even though you hardly have any things here. You've been living at the site for a week, so how can you now be late? It doesn't make any sense but you can't hold the thought together properly through the panic. You grab your jade figurine and rush out of the sleeping quarters, through the empty living quarters, towards the [[stairwell->sleep 991 stairwell]]. The stone floors echo, the candles on the walls flicker.
+
+:: sleep 991 stairwell [sleep]
+You reach the stairwell to the initiation chamber, the sides are hewn roughly out of rock, but the stairs are chiselled with precision and well finished. You slip down the stairs, nearly [[flying->sleep 991 remember]]. 
+
+:: sleep 991 remember [sleep]
+You enter the Hall of Refraction. Ultrasonic clicks and red lascans fan the room sequentially. Elaborate sensing equipment and bundles of cables line the walls with panels of spiked dampening foam filling the gaps between them. Almost none of the original rockface is visible. A small circle of 7 candlestands have been placed in the middle of the room, the only real light. You walk forward and [[enter the circle->sleep 991 circle]].
+
+:: sleep 991 circle [sleep]
+Taking your place in the center of the candle circle you can no longer make out the walls of the room. You wait there, out of breath. The ultrasonic clicks and laser patterns stop and the room goes silent. A circle of initiated members come into view beyond the candles, identically robed but with their faces individually obscured by a projector somewhere.
+
+One of them directly behind you asks you a [[question->sleep 991 fasted]].
+
+:: sleep 991 fasted [sleep]
+"Have you fasted?"
+
+[["Yes"->sleep 991 kyreon]]
+
+:: sleep 991 kyreon [sleep]
+"Have you drunk the kykeon?"
+
+[["Yes"->sleep 991 kiste]]
+
+:: sleep 991 kiste [sleep]
+"Have you taken from the kiste?"
+
+[["Yes"->sleep 991 calathus]]
+
+:: sleep 991 calathus [sleep]
+"Place your figurine in the kalathus."
+
+[["Yes"->sleep 991 darkness]]
+
+:: sleep 991 darkness [sleep]
+You put your jade figurine in the basket one of the initiates hands out. They place it on the floor and for a while you all stand at your positions in silence. Then simultaneously, the initiates surrounding you take a step forward and each blows out the candle nearest them. Total darkness descends. Your head begins to spin as your eyes fail to distinguish anything. Then the laser pattern and the ultrasonics fire up again. You know that there are other waves bombarding you, low dose x and radio waves. Several additional inputs gathered from the week you've been staying in the site are being studied and processed. DNA and gut biome measurements ritually taken, a machine administered psychological analysis. All being fed into a compute engine somewhere. The light show stops and you retrieve your [[figurine->sleep 991 metallic]].
+
+:: sleep 991 metallic [sleep]
+When you stand up you are inside the PSV *Metallic Red*. None of your alterations have been carried out but the worn pilot's chair has been replaced. There are several posters for old bands you've never listened to velcroed to the walls. The nutritional synthesiser is an Abqaiq model that you would never buy.
+
+There's a [[red light->sleep 991 sit]] blinking on a display up ahead.
+
+:: sleep 991 sit [sleep]
+The console prompts you to log in as someone you've never heard of. You stare at their name on the screen. You don't know them. You don't recognise the ship. The jade figurine in your hand grows so damp you feel like it must be dissolving. You sit on the floor as the projector turns off and the walls of the PSV *Metallic Red* disappear, replaced by the murk of the [[great hall->sleep 991 awaken]].
+
+:: sleep 991 awaken [sleep]
+You can see the circle of initiated members again. You've lost track of which door you entered the room from. You want to leave but you can barely stand up. You get to your knees, then to your feet. The members surrounding you seem closer than before. You stand there dazed for a second. Then the one in front of you reaches inside their robes and pulls out a mirror. The surface is ancient, dim and warped. What do you see?{
+(display: "morning")
+(set: $tabs to 4)} 
+
+[[The hero->awaken 991]]
+[[The hero's confidant->awaken 991]]
+[[The tyrant->awaken 991]]
+[[The seer->awaken 991]]
+[[The messenger->awaken 991]]
+[[The chorus->awaken 991]]
+
+:: awaken 991
+Before you can answer, you wake from the dream. That morning as you brush your teeth in front of the bathroom mirror it feels more portentous than normal, but you can't remember why.
+
+(display: $shipInterior)
+
+:: sleep992 [sleep]
+You're in the company house. Whitewashed walls and  dark wood flooring. All of the fabrics are undyed. There doesn't seem to be a single object made of plastic. The view out of the window is cloudy, but you can see the [[pebble->sleep 992 beach]] beach.
+
+:: sleep 992 beach [sleep]
+The stones are large, hard to walk on. Seagulls are wheeling silently ahead. The mist makes it impossible to tell where the sea ends and the sky begins. The beach is as flat as the land it emerges from. The sky is a huge upside down bowl that you are standing in the center of.
+
+Two of your reports from your old job are [[coming out of the water->sleep 992 reports]].
+
+:: sleep 992 reports [sleep]
+The reports are two guys, both young. They finish each other's sentences. They are telling you about a plan to prevent your prophecised death.
+
+"It seems like it's going to work, the prototype was fine."
+
+"We need to get approval from the CTO."
+
+"Once we get signoff we will make a start on getting it production ready."
+
+"We'll let you know if we run into any [[blockers->sleep 992 blockers]]."
+
+:: sleep 992 blockers [sleep]
+They walk away along the beach, shivering. You wonder for a moment about your prophesised death. You can't remember how you found out about it. Maybe the tarot deck? You realise you forgot the deck in the house and turn to jog back to get it, [[floating->sleep 992 tarot]] above the pebbles.
+
+:: sleep 992 tarot [sleep]
+In the house it's night. Candles are lit all around the rooms and you search through them looking for the tarot deck. You get the feeling that maybe your death was prophesised by accident. If you can find the deck you can ask it if it made a mistake. You get to a cabinet with four drawers. You open the [[first->sleep 992 first drawer]] one.
+
+:: sleep 992 first drawer [sleep]
+The drawer is full of jade figurines. You close it and open the [[second->sleep 992 second drawer]] drawer.
+
+:: sleep 992 second drawer [sleep]
+The drawer is empty. You close it and open the [[third->sleep 992 third drawer]] drawer.
+
+:: sleep 992 third drawer [sleep]
+{(display: "morning")(set: $tabs to 0)}The drawer contains old photos. You close it and open the [[fourth->awaken 992]] drawer.
+
+:: awaken 992
+You snap awake, feeling like you were searching for something, but you can no longer remember what.
+
+(display: $shipInterior)
+
+:: sleep site
+You hang your robe on a hook next to your bunk and get under the blanket before triggering the privacy screens. The already faint sounds of the dormitory cease immediately. You haven't slept in a normal bed for months but before long you begin to drift off. (live: 6s)[(go-to: "sleep site2")]
+
+:: sleep site2 [sleep]
+(live: 3s)[(go-to: "sleep site3")]
+
+:: sleep site3
+You wake to a gentle chiming noise. It takes you a second to work out what's going on, but you realise the chime means someone outside your bunk is trying to get your attention. You disable the privacy screen which reveals the initiate with the laurel tattoo squatted down next to you. Behind them the other beds in the room are empty and made up. 
+
+"Good morning." they say. "The Hierophant can see you now."
+
+Then they smile enigmatically and leave. (set: $siteState to "morning")(set: $kitchenState to "quietMorning")(set: $diningState to "morning")
+
+[[Get up->Sleeping quarters]]
+
+
+
+

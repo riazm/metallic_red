@@ -1,0 +1,144 @@
+https://coolors.co/palette/2b2d42-8d99ae-edf2f4-ef233c-d90429
+
+tw-story[tags~="console"], tw-story[tags~="console"] {
+    background-color: #000000;
+    font-family: Monospace;
+}
+tw-passage[tags~="console"] {
+    color: #00FF00;
+
+}
+tw-story[tags~="console"] tw-link, tw-story[tags~="console"] .enchantment-link {
+    color: #39FF14;
+}
+tw-story[tags~="console"] tw-link:hover, tw-story[tags~="console"] .enchantment-link:hover {
+    color: #808000;
+    border-bottom: none;
+}
+tw-story[tags~="console"] tw-link:visited, tw-story[tags~="console"] .enchantment-link:visited {
+    color: #808000;
+}
+
+tw-story[tags~="sleep"], tw-story[tags~="sleep"] {
+    background-color: #FFFFFF;
+    font-family: arial;
+}
+tw-passage[tags~="sleep"] {
+    color: #000000;
+}
+tw-story[tags~="sleep"] tw-link, tw-story[tags~="sleep"] .enchantment-link {
+    color: #0F0F0F;
+}
+tw-story[tags~="sleep"] tw-link:hover, tw-story[tags~="sleep"] .enchantment-link:hover {
+    color: #0F0F0F;
+    border-bottom: none;
+}
+tw-story[tags~="sleep"] tw-link:visited, tw-story[tags~="sleep"] .enchantment-link:visited {
+    color: #0F0F0F;
+}
+
+body, tw-story
+{
+  font-family: Georgia, serif;
+  font-size: 18px;
+  background-color: #2B2D42;
+}
+
+tw-passage
+{
+    color: #8D99AE;
+}
+tw-link
+{
+    color: #D90429;
+    transition: all 0.2s;
+}
+
+.enchantment-link:hover, tw-link:hover, a:hover, tw-link.visited:hover 
+{
+    color: #ba0c1f;
+    border-bottom: 1px solid  #ba0c1f;
+    
+
+}
+.enchantment-link:visited, tw-link:visited, .enchantment-link.visited, tw-link.visited, a:visited 
+{
+    color:#D90429;
+}
+
+
+
+  .go_west{
+    position: fixed;
+    top: 50%;
+    left: 30px;
+  }
+
+  .go_east{
+    position: fixed;
+    top: 50%;
+    right: 20px;
+  }
+
+  .go_north{
+    position: fixed;
+    left: 45%;
+    top: 10px;
+  }
+
+  .go_south{
+    position: fixed;
+    left: 45%;
+    bottom: 10px;
+  }
+
+
+#current-location {
+    width: 100%;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 30px;
+    font-family: Wisper;
+    position: absolute;
+    top: 45%;
+}
+
+.nav-text{
+    width: 150px;
+    font-size: 20px !important;
+    position: absolute;
+
+}
+
+#north-btn { top: 10px; left: 225px; }
+#south-btn { bottom: 10px; left: 225px; }
+#east-btn { top: 40%; right: 10px; }
+#west-btn { top: 40%; left: 10px; }
+
+/*
+  Reposition the Sidebar 'footer' tagged passage.
+*/
+tw-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%; /* padding-right of the tw-story element. */
+  max-height: 100%;
+  margin-top: 5%; /* padding-top of the tw-story element. */
+  padding: 0 0.5em 0.5em 0.5em;
+  text-align: right;
+  background-color: transparent;
+}
+tw-icon {
+  text-align: right;
+  padding-right: 0.75em;
+}
+tw-sidebar tw-icon[title*="undo" i],
+tw-sidebar tw-icon[title*="redo" i] {
+  display: none;
+}
+
+/* deletable */
+
+
+

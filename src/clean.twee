@@ -1,0 +1,28 @@
+:: clean menu
+{(if: $cleanConsole is 0)[[[Tidy the flight console->clean console]]<br>]
+(if: $cleanGalley is 0)[[[Tidy the galley->clean galley]]<br>]
+(if: $cleanBathroom is 0)[[[Tidy the bathroom->clean bathroom]]<br>]
+(if: $cleanBathroom + $cleanConsole + $cleanGalley is 3)[[[Return->$shipInterior]]]}
+
+:: clean console
+The flight console consists of several large displays and two harnessed, comfortable chairs for pilot and copilot. The large displays have become mismatched over time as they have broken and been replaced with off brand parts and the headrest adjustment for the pilot's chair has stopped working. Although there are a few mechanical controls around, including a flight yoke which can be folded up from the floor, the reality is that the ship can largely fly itself, even in emergency situations. Your main use of the console is to strap yourself into the less worn copilot's chair with a blanket and hook the auxiliary input of the large displays to your personal unit to read or watch movies. The cup holders are both full of 2/3rds empty bottles and tied to one of the arm rests there's a plastic bag overfilled with dehydrated dessert wrappers. You sort them by material type before floating them over to the recycling hatch on the other side of the ship. The blanket gets folded neatly before being tucked under one of the straps. You even find the energy to run a portable vacuum over the seat fabric itself.
+
+(set: $cleanConsole to 1)(display: "clean menu")
+
+:: clean galley
+The galley contains the nutritional synthesiser and the hydroponics grow array, both mismatched units that integrate poorly with the rest of the workspace. Despite the sorry state of the equipment, the chard leaves in the hydro array pop vividly under the grow light, which cheers the whole scene. You cut away a few dried leaves and change the water in the fluid tank. The nutritional synthesiser looks to be in reasonably good shape but there are a few spatters around the output nozzle which you wipe down. 
+
+As you're about to leave you notice that your [[jade figurine->jade figurine intro]] has nearly become detached from the wall and is in danger of floating free. 
+
+:: jade figurine intro
+Your jade figurine is about the size of your finger. It's a roughly carved humanoid figure with two drilled holes for eyes. Like many small objects on the *Metallic Red* it is stuck down with velcro to avoid it floating free and getting lost. For whatever reason only a few strands of the velcro are still connected. You press it down again so that it's firmly in position.
+
+(set: $cleanGalley to 1)(display: "clean menu")
+
+
+:: clean bathroom
+The bathroom is a fully sealed chamber lit up by multiple lights which deny every object a shadow. You normally set it to self clean after you're done in there, but the system never seems to clean the mirror properly and it becomes streaky and dim with dried on residue that builds up over time. You don't know why. It's the only optical mirror on board. Most of the screens can activate a high resolution camera display but the geometry always seems wrong.
+
+After wiping the mirror you realise how faint it had become. The image of your face it presents now appears shockingly vivid. You look at yourself for a moment, not really sure what to think.
+
+(set: $cleanBathroom to 1)(display: "clean menu")

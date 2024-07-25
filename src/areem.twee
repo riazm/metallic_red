@@ -1,0 +1,27 @@
+:: Areem conversation 1
+Areem looks up from the pan of onions he's tending. There's a moment where he can't place you, but as soon as he does he puts the pan down and throws his hands up in the air.
+
+"Hello!" He shouts over the noise of the kitchen. He wipes his hands on a towel hanging from his waist and pulls you into a hug. He smells of stale oil and fresh alliums.
+
+When he lets go he looks you up and down.
+
+"You look terrible, if you don't mind me saying. But I have the cure: Labour. Would you like task assigned to you, my fellow initiate?"
+
+[["Yes please."->Areem conversation 2]]
+[["If there's anything I can help with."->Areem conversation 2]]
+[["I've not got anything better to do."->Areem conversation 2]]
+
+:: Areem conversation 2
+Areem moves his gaze toward the shelving above his worktop. He pulls a large metal bowl and a few bottles from the shelf, then grabs a few handful of garlic and a few thumb sized chilli peppers from a pile on a nearby worktop. He dumps them all in front of you then walks off. 
+
+[[Examine bottles->Areem conversation 3]]
+[[Examine chilli peppers->Areem conversation 3]]
+
+:: Areem conversation 3
+Before you can touch your ingredients Areem returns with a stick blender that looks like a modernist assault rifle.
+
+"Someone left it in the fridge." he says, wiggling his eyebrows. "Could you do the dressing for the salad? 500ml should be enough. "
+
+He revs the blender a couple of times to check it works, then leaves it on the worktop, winks at you, and leaves.
+
+[[Make the dressing->Dressing intro]]

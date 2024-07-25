@@ -1,0 +1,91 @@
+:: site arrival
+The console reports that the ship completed its preprogrammed flight plan and docked at the orbital station three hours ago. Surface temperature on planet Telestrion is -40 degrees centigrade and adjusted to a 24 hour format the time is 16:30.
+
+Time to tidy up and leave. You might be gone for a couple of days. {
+(set: $bathroom to 1)
+(set: $galley to 1)
+(set: $sleepingq to 1)}
+
+(display: "gathermenu")
+
+:: gathermenu
+(if: $bathroom is 1)[[[Check the bathroom->gather bathroom]]
+](if: $galley is 1)[[[Check the galley->gather galley]]
+](if: $sleepingq is 1)[[[Check sleeping quarters->gather sleeping]]
+](if: $bathroom + $galley + $sleepingq is 0)[<p>[[Enter the airlock->exit ship]]]
+
+:: gather bathroom
+Most of your toiletries are already zipped into a waterproof vanity roll attached to an eyelet next to the mirror. You unclip it and roll it tight before putting it into your pack.(set: $bathroom to 0)
+
+(display: "gathermenu")
+
+:: gather galley
+You fill your water bottle and half consider taking some nutrient paste with you. It shouldn't be necessary. They have gardens on the site.
+
+Before you leave you rip the jade figurine from its velcro backing and tuck it into a tiny flapped pocket on your shirt. The pocket closes securely with a snap.(set: $galley to 0)
+
+(display: "gathermenu")
+
+:: gather sleeping
+You unclip a sliding drawer from the wall of your quarters and pull out the only shoes you brought appropriate for wearing in macrogravity, a pair of gold slip on sandals. You replace your Asics orbital tabis into the drawer they were in and secure it.(set: $sleepingq to 0)
+
+(display: "gathermenu")
+
+:: exit ship
+The airlock closes behind you, cycles twice and sprays you with a light disinfectant mist. Then the final bulkhead slides back. You float out of the PSV *Metallic Red* for the first time in several months into an anonymous skybridge. The automated systems which allowed the ship to dock without human intervention mean that you're completely alone as you pull yourself along worn handrails towards an open elevator car that you can see ahead of you.
+
+[[Enter the space elevator->space elevator]]
+
+:: space elevator
+The elevator has strapped chairs to help ease the transition from weightlessness. The seats themselves are past due for replacement with exposed foam and threadbare moquettes. You suspect they would never pass inspection by an orbital safety body, but the buckles themselves still seem sound and snap into place securely.
+
+There's just one button to [[press->site journey]], a translucent lozenge with an arrow pointing down.
+
+:: site journey
+The elevator car is fully shielded on all sides for protection from cosmic rays, but there's an infographic display unit that shows distance to the planetary surface. The infographic says that the trip will take several hours. When you flip the display to an entertainment channel it just displays an error code that you don't understand. You spend a couple of minutes trying various combinations of commands to see if any of them work. None of them do except for the camera feed from external which shows the planetary surface gradually growing closer.
+
+[[Wait->site journey 2]]
+
+:: site journey 2
+There's really nothing else to do. Occasional high winds shake the tether and elevator car as you watch the camera feed and bounce around in your harness. The planetary surface is a smear of greys and reds which grow in size but never resolve into anything meaningful. The orbital elevator you're riding on and its ground control site are the only buildngs on the surface of Telestrion. Anything else is probably only of interest to geologists.
+
+[[Wait->site journey 3]]
+
+:: site journey 3
+You try to nestle your head into a comfortable position but no matter what you try either your skin is in contact with exposed metal, or your neck is bent at a dangerous angle. Despite the discomfort you nearly drift off, only realising how close to sleep you were when the sudden slowing of the elevator car jolts you awake. You feel a final moment of weightlessness as the car decelerates. When it stops you sink into your chair. You're planetside again. There's a sequence of thuds, a rushing sound, and then a green light illuminates.
+
+[[Get up->site surface]]
+
+:: site surface
+You unclip from the harness and nearly fall over trying to push yourself out of the chair. For the first time in several months your body is being subjected to a meaningful amount of gravity and your inner ear isn't used to it. You hold onto the handrails for support as you leave the elevator car and walk towards the final airlock. There's a sign in front of it.
+
+"No uninitiated may pass into the greater cave system. Enter this airlock and wait."
+
+The circular metal door slides open. Beyond it the walkway and artificial lighting end. There's a circular rock tunnel the same height and width of the doorway itself, leading into darkness. Gravel has been piled on the floor to provide a flat surface to walk on. About 200 metres away at the end of the tunnel you can see a light.
+
+[[Head for the light->site tunnel]]
+
+:: site tunnel
+You start walking along the tunnel. The gravel crunches underneath you and slows you down. The air is moist. You hear the sliding door back to the elevator site slide closed behind you. The handrail that you held onto previously has gone, now you touch the cave wall for balance. As you get nearer to the light at the end of the tunnel a figure appears in front of it.
+
+[[Keep walking->approach the figure]]
+
+:: approach the figure
+The figure crunches towards you much faster than you can progress along the tunnel in your disoriented state. The gravel slides as you walk across it. When they're about 10 meters away the figure stops and shines a light at you.
+
+"The uninitiated can't pass." they say. The voice has a slight accent that you can't place. They're wearing a robe but the hood is down.
+
+[[Show your jade figurine->show the figure]]
+
+:: show the figure
+You snap the secure pocket flap open and retrieve your jade figurine. Held up to the light in front of you it appears as a silhouette. 
+
+"I see." says the voice ahead. They lower the light. "Come with me, I'll take you to the Hierophant. Why didn't you tell us you were coming?"
+
+[["I forgot."->follow the figure]]
+[["I didn't know I would end up here."->follow the figure]]
+
+:: follow the figure
+With the light no longer shining in your eyes you follow behind the figure. They walk slowly so that you can keep up. In the unlit tunnel it's hard to tell how far you've walked or in what direction. You try to focus on keeping your balance. Eventually you realise the tunnel must have subtly curved, because in front of you is a cave room that you couldn't see from the other end. It's lit with two other exits leading from it. On the wall is a row of hooks with identical robes. You grab one and pull it on over your head. By the time you're wearing it the figure that led you here has gone. (set: $siteState to "preDinner")
+
+[[Wait->Cave entrance]]

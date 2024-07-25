@@ -1,0 +1,108 @@
+:: Hierophant 1
+"Come come, enter!"
+
+The voice responds instantly to your knock, and continues uninterrupted as you open the door.
+
+"The illustrious child of one of our most illustrious members, returned to our fold for a visit."
+
+The Hierophant's office could have been as big as the great hall, but it's a modest room. The walls are covered in book cases with hundreds of tomes, artefacts and keepsakes from his career. His desk is a single piece of stone that rises seamlessly from the solid floor of the chamber. There are no photographs of any people anywhere. 
+
+"Before we talk more, I must ask, is your father well?"
+
+[["He's good. He sends his regards"->Hierophant 2]]
+
+:: Hierophant 2
+The Hierophant himself looks the same as he did last time you saw him, but aged. His eyes are more sunken now, the wrinkles around his eyes are more pronounced.
+
+"Excellent. We still think of him fondly, though he would be the last to admit it our colony wouldn't exist without his scholarship and material contributions. His strength of will and focus are legendary."
+
+[["The mysteries have always been important to him."->Hierophant 3]]
+
+:: Hierophant 3
+"As they are to all of us."
+
+The Hierophant holds your gaze until you look away. For the first time since your arrival you feel as though you're underneath half a mile of solid rock on a planet with no atmosphere. 
+
+"But... I sense you're looking for something more than just a reconnection with our community, warm as it is."
+
+[["I've really appreciated being here."->Hierophant 4]]
+
+:: Hierophant 4
+"Of course, our hostility to the uninitiated is only matched by our hospitality to those who have entered the light. We're all seekers here. If we couldn't enjoy each other's company our endeavours would have fizzled out a long time ago."
+
+[["Yes"->Hierophant 5]]
+
+:: Hierophant 5
+"And so, to business then. What has brought you here?"
+
+[["I don't think I want to be part of the mysteries anymore."->Hierophant 6]]
+
+:: Hierophant 6
+The Hierophant smiles warily.
+
+"But what could you mean by that?" he asks.
+
+"I don't want to be part of the organisation." you say.
+
+[["I want to leave. Can I leave?"->Hierophant 7]]
+
+:: Hierophant 7
+The air in the room is entirely still. A light flashes on a console somewhere, casting a rhythmic red haze across the Hierophant's features.
+
+"It's an unusual request for sure, but of course in a tradition as long as ours you are never the first of anything. There have been members who wanted to leave. Maybe many who believed they did leave. Many more who were forced to."
+
+He turns jovial again for a second.
+
+"I assume you're not being forced?"
+
+[["No, it's not that."->Hierophant 8]]
+
+:: Hierophant 8
+"Of course not. But something is troubling you. Something that you think will be eased by leaving. No?"
+
+[["I don't really want to talk about it. I just want to leave."->Hierophant 9]]
+
+:: Hierophant 9
+"I understand, and I wouldn't probe you for your justification for leaving. Not just because you don't want to discuss it."
+
+The hierophant knits his fingers together on the solid stone desktop in front of him. His face is a mask of total concern.
+
+"There have been members who wanted to leave, members who we would have liked to expel. But neither of these things are possible anymore than it would be possible to be unborn. You have been shown the mystery. I could tell you that you're no longer a member, I could ask for you to be removed from the site and your figurine confiscated, I could communicate to all extant initiates with whatever authority I have that you're persona non grata and I have been forced to do this before. None of these things would reverse your initiation, none of them would unshow you what you've been shown. You've been through something, the same thing that all of us have been through. We are all initiates here, and there's nothing that can undo that. We all share the ritual."
+
+[["I don't want to share it."->Hierophant 10]]
+
+:: Hierophant 10
+"Believe me when I say that I am sorry to hear that, but there's nothing I, personally can do. I can't free you from what you believe your association here means. If you want that it's something you'll have to undo for yourself."
+
+Your hand finds itself at the secure pocket which holds your jade figurine.
+
+[["How can I undo it?"->Hierophant 11]]
+
+:: Hierophant 11
+"I couldn't tell you."
+
+The hierophant leans back in his chair.
+
+"I really couldn't. I would if I could. But I can't know that."
+
+[[Remove the jade figurine->Hierophant 12]]
+
+:: Hierophant 12
+You reach under your robe to unsnap the pocket which holds your jade figurine. You place it on the table in front of you and get up to leave. But before you can fully turn away, the Hierophant speaks. You hear his voice without looking back at him.
+
+"I understand entirely."
+
+You walk out of the office into the darkened hallway and begin to make your way back to the Buraq Class Personal Space Vehicle [[*Metallic Red*->End Survey]].
+
+:: End
+(live: 5s)[(go-to: "menu screen")]
+
+:: End Survey
+
+Hello, thank you for playing the draft version of my game. Aside from letting me know about obvious problems like typos, bugs, getting stuck, passages not making sense, if you could answer the following questions I would appreciate it:
+
+<a href="https://forms.gle/dTLwJLZf6nZSBBBq9"; target="_blank">goolge form link hopefully it works</a>
+
+https://forms.gle/dTLwJLZf6nZSBBBq9 google form link in case the previous one didn't work
+
+Thank you! 
