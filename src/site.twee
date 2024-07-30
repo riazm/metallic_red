@@ -4,11 +4,11 @@
 (set: $location to "Lobby")
 (set: $westText to "Upper Landing")
 (set: $southText to "")
-}You're at the entrance to the site, like the tunnel you followed to get here it has been mechanically carved out of solid rock, but it's larger and rectangular. The floor is solid, there's no more gravel. A row of robes identical to the one you're wearing are hung from the wall.
+}(if: $siteState is 0)[(set: $siteState to "preDinner")]You're at the entrance to the site, like the tunnel you followed to get here it has been mechanically carved out of solid rock, but it's larger and rectangular. The floor is solid, there's no more gravel. A row of robes identical to the one you're wearing are hung from the wall.
 
 :: Recreational
 {(set: $northText to "Dormitory")
-(set: $eastText to "Hydroponic grow room")
+(set: $eastText to "Hydroponics")
 (set: $location to "Recreational")
 (set: $westText to "Gym")
 (set: $southText to "Lobby")
@@ -32,7 +32,7 @@ There are exits to the [[East->Hydroponic grow room]] (if: $exploredDining is 0)
 
 (set: $exploredNorth to 1)}There are several bunk beds here. (if: $siteState is "morning")[Clearly you're the last person to wake up, all of the other beds have been made and tidied.](if: $siteState is "preDinner")[Most have a scattering of personal effects or a dent in the pillow indicating that they are occupied.
 
-There's a robed initiate lying on one of the bunks reading, they give you a slow, kingly nod when you walk in then go back to their book.](else-if: $siteState is "postDinner")[The room has filled up, people are slouching around in their night clothes, carrying their toiletries and getting ready for bed.
+There's a robed initiate lying on one of the bunks reading. They give you a slow, kingly nod when you walk in and then go back to their book.](else-if: $siteState is "postDinner")[The room has filled up, people are slouching around in their night clothes, carrying their toiletries and getting ready for bed.
 
 The bunk you normally slept in is free.
 
@@ -90,7 +90,7 @@ You pickup the bowl of dressing.
 :: Dining
 {(set: $northText to "")
 (set: $eastText to "")
-(set: $location to "")
+(set: $location to "Dining")
 (set: $westText to "")
 (set: $southText to "Kitchen")}(if: $diningState is "serveDressing")[The lights have been turned on and robed initiates are either sitting down at their benches, or rushing in and out of the room bringing in pots and large dishes. Someone grabs the salad dressing from you and decants it into several smaller containers, which are then picked up by several other initiates and distributed around.
 

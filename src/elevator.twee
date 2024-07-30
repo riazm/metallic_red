@@ -86,6 +86,6 @@ You snap the secure pocket flap open and retrieve your jade figurine. Held up to
 [["I didn't know I would end up here."->follow the figure]]
 
 :: follow the figure
-With the light no longer shining in your eyes you follow behind the figure. They walk slowly so that you can keep up. In the unlit tunnel it's hard to tell how far you've walked or in what direction. You try to focus on keeping your balance. Eventually you realise the tunnel must have subtly curved, because in front of you is a cave room that you couldn't see from the other end. It's lit with two other exits leading from it. On the wall is a row of hooks with identical robes. You grab one and pull it on over your head. By the time you're wearing it the figure that led you here has gone. (set: $siteState to "preDinner")
+With the light no longer shining in your eyes you follow behind the figure. They walk slowly so that you can keep up. In the unlit tunnel it's hard to tell how far you've walked or in what direction. You try to focus on keeping your balance. Eventually you realise the tunnel must have subtly curved, because in front of you is a cave room that you couldn't see from the other end. It's lit with two other exits leading from it. On the wall is a row of hooks with identical robes. You grab one and pull it on over your head. By the time you're wearing it the figure that led you here has gone. 
 
-[[Wait->Cave entrance]]
+[[Wait->Lobby]]

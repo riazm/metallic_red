@@ -86,12 +86,34 @@ Move some of the early console days to later days or add new entries
 <!--This loads the east/north/south/west/ text into the sidebar-->
 
 :: Sidebar [footer]
-(append: ?SideBar)[\
-east [[$eastText]]
-north [[$northText]]
-current $location
-south [[$southText]]
-west [[$westText]]
+(append: ?Sidebar)[
+{<div class="container">
+  <div class="item"></div>
+  <div class="item">
+    (if: $northText is not 0)[
+      [[$northText]]
+    ]
+  </div>  
+  <div class="item"></div>
+  <div class="item">
+    (if: $eastText is not 0)[
+      [[$eastText]]
+    ]    
+  </div>
+  <div class="item">
+    $location
+  </div>
+    <div class="item">
+    (if: $westText is not 0)[
+      [[$westText]]
+    ]
+  </div>
+  <div class="item"></div>
+  <div class="item">
+    (if: $southText is not 0)[
+      [[$southText]]
+    ]
+  </div>
+  <div class="item"></div>
+</div>}
 ]
-
-

@@ -133,9 +133,21 @@ tw-icon {
   text-align: right;
   padding-right: 0.75em;
 }
+
+
 tw-sidebar tw-icon[title*="undo" i],
 tw-sidebar tw-icon[title*="redo" i] {
   display: none;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+}
+
+.item {
+  text-align: center;
 }
 
 /* deletable */
