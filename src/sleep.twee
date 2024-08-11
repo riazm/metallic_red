@@ -13,7 +13,7 @@
 (set: $dreampassage to "sleep" + (str: $day))You cinch down the belts on your sleeping sack (either: "tightly", "gently") and turn the light cycle to (either: "nocturnal", "twilight"). (either:"Sleep comes quickly.", "You float there for a while before passing out.", "You feel wide awake so you read for a while before turning in.", "You barely have time to think before you go under." ) (live: 3s)[(go-to: $dreampassage)]
 
 :: sleep987 [sleep]
-You're in your childhood home. It's high summer. You are a child. You walk through a familiar door that opens onto the [[street->sleep987 street]] in front of your house. 
+You're in your childhood home. It's high summer. You are a child. You walk through a familiar door that opens onto the street in front of your [[house->sleep987 street]]. 
 
 :: sleep987 street [sleep]
 The street stretches out infinitely in either direction, longer than you remember, but directly in front of you is a steel latticed structure taller than any building on the road. The base of the lattice spreads across both sides of the street and onto the pavement. You begin to look up, your eye following the structure into the clear sky. It's an [[electricity pylon->sleep987_1]].
@@ -23,7 +23,7 @@ In the dream this is just how tall a pylon is and always has been, but if pylons
 
 :: sleep987_2 [sleep]
 {(set: $tabs to 4)
-(display: "morning")}The pylon itself is not electrified, and there is no danger from touching it, but as you reach out your hand towards one of the steel cross beams you feel as though a charge is building in the air around you. Your hair begins to stand up, and you hear a humming, with great trepidation the very tip of your [[finger->awaken 987]] touches the pylon.
+(display: "morning")}The pylon itself is not electrified, and there is no danger from touching it, but as you reach out your hand towards one of the steel cross beams you feel as though a charge is building in the air around you. Your hair begins to stand up, and you hear a humming, with great trepidation the very tip of your finger touches the [[pylon->awaken 987]].
 
 :: awaken 987
 You wake with a jolt.
@@ -43,13 +43,36 @@ You're in front of a vending machine. Your eyes sweep over the replica display c
 You effortlessly crack open the $beverage can, hearing the familiar sound but feeling no resistance from the ring pull. You realise that you're extremely thirsty. You raise the can to your lips and throw your head back. Nothing happens. The liquid doesn't seem to move. You move it away from your lips and raise it to your [[eye->sleep988 look]].
 
 :: sleep988 look [sleep]
-There's something [[in there->sleep988 look closer]].
+The liquid is stuck in the can. You knock it with your hand to try and shake it loose. You look at the machine again, the $beverage you ordered isn't there anymore. In fact all of the $beverage products are no longer there. The blue seven segment display above the coin slot begins to display a [[message->sleep988 message]].
+
+:: sleep988 message [sleep]
+The message flashes up sequentially on the display.
+
+It shows: "THIS VENDING MACHINE"
+
+"IS NOW OWNED BY {(if: $beverage is "Pepsi")[COCACOLA](else:)[PEPSICO]}"
+
+"WE WOULD LIKE TO THANK"
+
+"YOU FOR YOUR INTEREST"
+
+and then begins to repeat the message in a language you don't [[understand->sleep988 understand]].
+
+:: sleep988 understand [sleep]
+You feel like you can translate the language on the vending machine display and that it isn't saying exactly the same thing that it said when you were reading it in English. There's something about a hostile takeover, an investment fund headquartered on an abandoned planet.
+
+You squint at the messages as they flash up, translating as you go. It sounds like the final decision on the takeover was based on the outputs from this specific vending machine. Maybe even your purchase.
+
+The can in your hand vibrates slightly, like one of those coasters that tell you that your meal is [[ready->sleep988 ready]].  
+
+:: sleep988 ready [sleep]
+The weight inside the can is shifting around with the vibration. You hold it to your waist, trying to look through the hole at the top to see what's happening in there. You need both hands to keep it [[still->sleep988 look closer]].
 
 :: sleep988 look closer [sleep]
-As you look into the darkened hole the weight of the can shifts towards you abruptly and you drop it on the floor. A thick, black, oily liquid begins to leak out. You go to kick the [[can->awaken 988]]{
+As you look into the dark hole made by the ring pull the weight of the can shifts towards you abruptly and you drop it on the floor. A thick, black, oily liquid begins to leak out. You go to kick the can [[away->awaken 988]]{
 (set: $tabs to 4)
 (display: "morning")
-} away.
+}.
 
 :: awaken 988
 As your foot contacts the can you realise you're dreaming and begin to drift to consciousness.
@@ -60,19 +83,25 @@ As your foot contacts the can you realise you're dreaming and begin to drift to 
 You are in the PSV *Metallic Red* trying to fix the nutrisynth machine. Your hand is deep inside it at an awkward angle, trying to screw a bolt back on. The bolt keeps on feeling like it's connecting, but then falls off and you have to stretch even more awkwardly to pick it up to try again. But it keeps falling off. You stretch further and [[try again->sleep989 again]].
 
 :: sleep989 again [sleep]
-This time you are sure that the thread has caught, but when you go to spin the bolt down it snags prematurely. The threads are crossed and a feeling of panic shoots through you. If the threads have crossed then maybe you've done permanent damage to the unit. If you can't fix it you'll run out of food within 14 days. You'll need to plot a course back home. Your fingers are sweating as you try to free the [[bolt->sleep989 free]].
+This time you are sure that the thread has caught, but when you go to spin the bolt down it snags prematurely. The threads are crossed and a feeling of panic shoots through you. If the threads have crossed then maybe you've done permanent damage to the unit. If you can't fix it you'll run out of food within 14 days. You'll need to plot a course back home. Your fingers are sweating as you try to free the [[bolt->sleep989 bolt]].
+
+:: sleep989 bolt [sleep]
+Your entire arm is inside the machine, you can't see your fingertips as they try to get enough purchase on the bolt to be able to turn it. It slips underneath your fingers in a way that feels almost as though it's spinning but it never seems to work its way loose. You apply as much force as you can through your fingertips and the bolt shears off entirely in your hands. You're left holding the snapped half, the other half is still embedded in the machine. You hear a gigantic [[bang->sleep989 free]]. 
 
 :: sleep989 free [sleep]
-You are in the PSV *Metallic Red*. There's a repeated banging sound coming from somewhere. Like someone is hammering on a pipe. You try to locate the sound. It's coming from one of the external bulkheads. You put your hand on the bulkhead and feel the vibration caused by the banging. The PSV *Metallic Red* has no windows, but proximity alarms should trigger if anything comes within one thousand kilometers of the hull, automated evasive action should trigger if anything comes closer than that. You [[check->sleep989 computer]] the ship's computer.
+You are in the PSV *Metallic Red*. There's a repeated banging sound coming from somewhere. Like someone is hammering on a pipe that you're floating inside. You try to locate the sound. It's coming from one of the external bulkheads. You put your hand on the bulkhead and feel the vibration caused by the banging. The PSV *Metallic Red* has no windows, but proximity alarms should trigger if anything comes within one thousand kilometers of the hull, automated evasive action should trigger if anything comes closer than that. You check the ship's [[computer->sleep989 computer]].
 
 :: sleep989 computer [sleep]
-You are in the PSV *Metallic Red*. Proximity alarms that you have never heard before are blaring, nearly deafening you, but over the tumult of the rise and fall you can still hear the banging on the ship's hull. The debris and potential impact report on the ship's computer says that a human sized object originating in dark space outside of the local group has been on a collision trajectory for the past 13 minutes. The banging on the hull is louder now. You look up from the computer and see the hull begin to dent and deform. You'll have to attempt to fix the {(set: $tarotread to 0)
+Proximity alarms that you have never heard before are blaring, nearly deafening you, but over the tumult of the rise and fall you can still hear the banging on the ship's hull. The debris and potential impact report on the ship's computer says that a human sized object originating in dark space outside of the local group has been on a collision trajectory for the past 13 minutes. The banging on the hull is louder now. You look up from the computer and see the actual bulkhead of the ship begin to dent and [[deform->sleep989 deform]].
+
+:: sleep989 deform [sleep]
+The wall of the ship in front of you starts to stretch further inwards with each bang, jerking inwards until it reaches to the opposite side, then curving further, encircling towards you. The space available shrinks on every bang as the ship distorts around, seeming to bend in half and then continue bending further. The entire vessel has compacted into a cylinder that you float within. You put your hand out to feel the opposing wall as another bang drives it towards you, enclosing you {(set: $tarotread to 0)
 (set: $tabs to 3)
 (display: "morning")
-} [[hull->awaken989]].
+} [[completely->awaken989]].
 
 :: awaken989
-You wake up with a nagging feeling that you're meant to be doing something.
+You wake up, worried that the nutritional synthesiser isn't working, but when you go to get today's ration from it, you see that it's performing adequately.
 
 (display: $shipInterior)
 

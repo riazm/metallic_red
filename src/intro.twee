@@ -5,7 +5,7 @@
 (set: $day to 987)
 (set: $hydro to (a:))
 (set: $nutrisynth to 7)
-(set: $seedCatalogue to (a: "Chard", "Mizuna", "Shungiku", "Mitsuba", "Tatsoi"))
+(set: $seedCatalogue to (a: "Chard", "Mizuna", "Shungiku", "Mitsuba", "Shisho"))
 (set: $chard to (dm:
 	"name", "Chard",
 	"health", 4,
@@ -82,6 +82,13 @@ Need to make it clear you're eating paste
 Move some of the early console days to later days or add new entries
 
 992 is the awaken to the site day
+
+add a conversation in the site. But what about.
+
+Overheard conversation about getting angry with something.
+
+
+
 
 <!--This loads the east/north/south/west/ text into the sidebar-->
 

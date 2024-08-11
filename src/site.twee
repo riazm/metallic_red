@@ -61,7 +61,6 @@ The lights seem even brighter than they did yesterday.]
 (set: $westText to "")
 (set: $southText to "Hydroponics")
 
-
 }You're inside the workshops. The room is filled with fabricators and roboateliers sitting neatly on workbenches. Tools are obsessively organised on gridded pegboards stuck to the bare cave walls. There are smaller hatches leading from the room which you assume are used by maintenance robots.
 
 The only exit is to the [[South->Hydroponics]], where you entered from.
