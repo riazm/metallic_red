@@ -20,17 +20,13 @@ Rats on the riverbank. Mushrooms from the soil.
 
 :: site conversation display
 {
-
-
 (if: $conversations is not an array)[
      (set: $conversations to (a: "responsibility", "steering", "whiteboard", "movement", "owl", "change", "robotics", "laurel"))
 ]
 
-(set: $convChance to (random: 1,4))
-(if: $convChance is 1)[
-     (display: "site conversation " + (nth: visits, ...$conversations))
-]
-}
+(set: $convChance to (random: 1,4))}(if: $convChance is 1)[
+(display: "site conversation " + (nth: visits, ...$conversations))]
+
 
 :: site conversation responsibility
 You overhear a voice saying:

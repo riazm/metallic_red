@@ -12,11 +12,11 @@
 (set: $location to "Recreational")
 (set: $westText to "Gym")
 (set: $southText to "Lobby")
-}You're inside the main living quarters on site. There's a large bookshelf on the wall and a few consoles with display units. The rest of the room is taken up by some communal floor couches. (if: $siteState is "preDinner")[A pair of younger initiates are gathered around one of the display units.](if: $siteState is "postDinner")[Groups of initiates who don't want to go to sleep are lying on some of the couches, talking.]
+}You're inside the main living quarters on site. There's a large bookshelf on the wall and a few consoles with display units. The rest of the room is taken up by some communal floor couches.
 
-(display: "site conversation display")
-
-(if: (history:) contains "Laurel conversation 2")[(set: $laurelConvo to 1)](else:)[(set: $laurelConvo to 0)](if: $exploredNorth + $exploredDining + $exploredGym + $exploredUnderground is 4 and $laurelConvo is 0)[
+(if: $siteState is "preDinner")[A pair of younger initiates are gathered around one of the display units.
+(display: "site conversation display")](if: $siteState is "postDinner")[Groups of initiates who don't want to go to sleep are lying on some of the couches, talking.
+(display: "site conversation display")](if: $siteState is "morning")[There's nobody here.](if: (history:) contains "Laurel conversation 2")[(set: $laurelConvo to 1)](else:)[(set: $laurelConvo to 0)](if: $exploredNorth + $exploredDining + $exploredGym + $exploredUnderground is 4 and $laurelConvo is 0)[
 
 You're examining the volumes on the bookshelf when you hear a shuffling behind you. It's the initiate who met you at the cave entrance. You notice they have a tattoo of a laurel leaf behind their left ear. 
 
@@ -33,7 +33,6 @@ You're examining the volumes on the bookshelf when you hear a shuffling behind y
 
 
 (set: $exploredNorth to 1)}There are several bunk beds here. (if: $siteState is "morning")[Clearly you're the last person to wake up, all of the other beds have been made and tidied.](if: $siteState is "preDinner")[Most have a scattering of personal effects or a dent in the pillow indicating that they are occupied.
-
 (display: "site conversation display")](else-if: $siteState is "postDinner")[The room has filled up, people are slouching around in their night clothes, carrying their toiletries and getting ready for bed. There's a robed initiate lying on one of the bunks reading. They give you a slow, kingly nod when you walk in and then go back to their book.
 
 The bunk you normally slept in is free.
@@ -50,13 +49,14 @@ The bunk you normally slept in is free.
 
 }You're inside the hydroponics room, a much larger and more brightly lit chamber than most of the others on the site. Plants and even some smaller trees sit in large beds of gravel that appears to be made of the same stone as the walls of the cave complex. Probably leftover aggregate from construction of the site. The room smells damp, like a river bed.(if: $siteState is "preDinner")[
 
-The lights above are blindingly bright and clear. If you look up through the canopy of a nearby lemon tree and close your eyes, you could believe you're on earth somewhere.](if: $siteState is "postDinner")[
+The lights above are blindingly bright and clear. If you look up through the canopy of a nearby lemon tree and close your eyes, you could believe you're on earth somewhere.
+(display: "site conversation display")
+](if: $siteState is "postDinner")[
 
 The lights have been turned low to simulate night. You can hear a faint gurgle as the growth solutions are filtered for algae.](if: $siteState is "morning")[
 
 The lights seem even brighter than they did yesterday.]
 
-(display: "site conversation display")
 
 :: Workshop
 {(set: $northText to "")
@@ -67,7 +67,7 @@ The lights seem even brighter than they did yesterday.]
 
 }You're inside the workshops. The room is filled with fabricators and roboateliers sitting neatly on workbenches. Tools are obsessively organised on gridded pegboards stuck to the bare cave walls. There are smaller hatches leading from the room which you assume are used by maintenance robots.
 
-The only exit is to the [[South->Hydroponics]], where you entered from.
+(if: $siteState is "preDinner")[(display: "site conversation display")]
 
 :: Kitchen
 {(set: $northText to "Dining")
@@ -83,7 +83,7 @@ Your old friend Areem is here, stirring a pan of onions.
 
 You recognise Areem, the head chef but they don't notice you as they're helping someone learn how to dice an onion.](else-if: $kitchenState is "serveDressing")[
 
-The bowl of (link: "salad dressing")[(set: $diningState to "serveDressing")(set: $kitchenState to "gotDressing")(goto: "Kitchen pickup")] you made is here.]
+The bowl of (link: "salad dressing")[(set: $kitchenState to "gotDressing")(goto: "Kitchen pickup")] you made is here.(set: $diningState to "serveDressing")]
 
 :: Kitchen pickup
 You pickup the bowl of dressing.
@@ -95,54 +95,60 @@ You pickup the bowl of dressing.
 (set: $eastText to "")
 (set: $location to "Dining")
 (set: $westText to "")
-(set: $southText to "Kitchen")}(if: $diningState is "serveDressing")[The lights have been turned on and robed initiates are either sitting down at their benches, or rushing in and out of the room bringing in pots and large dishes. Someone grabs the salad dressing from you and decants it into several smaller containers, which are then picked up by several other initiates and distributed around.
+(set: $southText to "Kitchen")}(if: $diningState is "serveDressing")[(if: $kitchenState is not "gotDressing")[Initiates are beginning to set the room up for the meal.
+
+You should probably bring the salad dressing from the kitchen here.](else:)[The lights have been turned on and robed initiates are either sitting down at their benches, or rushing in and out of the room bringing in pots and large dishes. Someone grabs the salad dressing from you and decants it into several smaller containers, which are then picked up by several other initiates and distributed around the room.
 
 With your hands now empty you see little else to do except sit down. Several groups have formed at the tables, but you don't see anyone you recognise. A group of more senior Perses in the corner might be acquaintances of your father but you don't feel like fielding the kind of conversations they'll want to have. You sit down at the table nearest to yourself and help yourself to a sour cherry from the bowl on the table.
 
-[[Eat the cherry->Dining intro]]](else-if: $diningState is "kitchenShift")[The room has largely emptied, the only table still lively is the one with the kitchen shift, who are just getting started on the remains of the first course.](else-if: $diningState is "morning")[The dining room is empty. You must have slept through breakfast because everything has been put away.](else:)[There are several large tables with benches in the dining room, but the lights are off. Dinner probably won't be served for a little while.](set: $exploredDining to 1)
+[[Eat the cherry->Dining intro]]]](else-if: $diningState is "kitchenShift")[The room has largely emptied, the only table still lively is the one with the cooking shift, who are just getting started on the remains of the first course.](else-if: $diningState is "morning")[The dining room is empty. You must have slept through breakfast because everything has been put away.](else:)[There are several large tables with benches in the dining room, but the lights are off. Dinner probably won't be served for a little while.](set: $exploredDining to 1)
 
 :: Gym
 {(set: $northText to "")
 (set: $eastText to "Recreational")
 (set: $location to "Gym")
 (set: $westText to "")
-(set: $southText to "")}The site gym is mostly focused on bodyweight equipment with a few cardio machines. Pilates mats and rubber resistance bands are hung up on the wall. (if: $siteState is "preDinner")[Someone you don't recognise is spinning out a leisurely pace on a stationary bike.](else-if: $siteState is "postDinner")[Someone is doing a slow yoga routine to prepare for bed.]
+(set: $southText to "")}(set: $exploredGym to 1)The site gym is mostly focused on bodyweight equipment with a few cardio machines. Pilates mats and rubber resistance bands are hung up on the wall.
 
-(display: "site conversation display")
+(if: $siteState is "preDinner")[Someone you don't recognise is spinning out a leisurely pace on a stationary bike whilst watching a video that shows a lot of mountainous scenery from an uninhabited planet.
+
+(display: "site conversation display")](else-if: $siteState is "postDinner")[Someone is doing a slow yoga routine to prepare for bed. They look very graceful.](else:)[The room is completely empty. All the equipment is tidied away.]
+
+
 
 :: Upper Landing
-{(set: $northText to "Staircase")
-(set: $eastText to "")
+{(set: $northText to "")
+(set: $eastText to "Lobby")
 (set: $location to "Upper Landing")
 (set: $westText to "")
-(set: $southText to "Lobby")}You're in a small ante chamber. It's poorly lit but you can make out text etched into the rock:
+(set: $southText to "Staircase")}You're in a small ante chamber. It's poorly lit but you can make out text etched into the rock:
 
 "No uninitiated may pass into the Great Hall."(if: $siteState is "morning")[
 
 The floor has been freshly mopped by one of the cleaning robots.]
 
 :: Staircase
-{(set: $northText to "Lower Corridor")
+{(set: $northText to "Upper Landing")
 (set: $eastText to "")
 (set: $location to "Staircase")
 (set: $westText to "")
-(set: $southText to "Upper Landing")}You're in a dark staircase. The steps themselves have been cut out of the rock directly and polished smooth. (if: $siteState is "morning")[](else:)[The ceiling is quite low and you feel at permanent risk of bumping into it.]
+(set: $southText to "Lower Corridor")}You're in a dark staircase. The steps themselves have been cut out of the rock directly and polished smooth. (if: $siteState is "morning")[](else:)[The ceiling is quite low and you feel at permanent risk of bumping into it.]
 
-:: Corridor
-{(set: $northText to "Great Hall")
+:: Lower Corridor
+{(set: $northText to "Staircase")
 (set: $eastText to "Hierophant's Chambers")
 (set: $location to "Lower Corridor")
 (set: $westText to "")
-(set: $southText to "Staircase")}You're in a dark corridor with a double height ceiling.
+(set: $southText to "Great Hall")}You're in a dark corridor with a double height ceiling.
 
 To the North there are double doors set in a huge arch. To the East is a normal sized door. (if: $siteState is "preDinner")[In the darkness you can see a crack of light shining underneath the door to the east.](if: $siteState is "morning")[You can vaguely hear sound and commotion coming from inside the Great Hall]
 
 :: Great Hall
-{(set: $northText to "")
+{(set: $northText to "Lower Corridor")
 (set: $eastText to "")
 (set: $location to "Great Hall")
 (set: $westText to "")
-(set: $southText to "Lower Corridor")}(if: $siteState is "morning")[You can hear the noise of a communal meeting happening in the Great Hall. Presumably that's where everyone is this morning.](else:)[Each one of the double doors is wider than you are tall and suspended on huge hinges. There's a bolt across both of them which is locked in place.]
+(set: $southText to "")}(if: $siteState is "morning")[You can hear the noise of a communal meeting happening in the Great Hall. Presumably that's where everyone is this morning.](else:)[Each one of the double doors is wider than you are tall and suspended on huge hinges. There's a bolt across both of them which is locked in place.]
 
 :: Hierophant's Chambers
 {(set: $northText to "")

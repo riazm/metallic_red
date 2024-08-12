@@ -1,5 +1,9 @@
 :: Dining intro
-You bite carefully into the cherry, it's incredibly sour and slightly mushy from dethawing but it's probably the first piece of fruit you've eaten in months. Around you dishes from the kitchen are being laid out and initiates are taking their places. The three initiates who you've sat next to are happily talking amongst themselves. The one next to you has both ears pierced and large gold hoops hanging from each ear, the one across from you has manipulated the hood of their robe so that it rakishly frames their face, the one diagonal from you seems shrunken into themselves, like they're ill or cold. They're talking about altering the fabric make up for robe fabrication.
+{(set: $northText to "")
+(set: $eastText to "")
+(set: $location to "")
+(set: $westText to "")
+(set: $southText to "")}You bite carefully into the cherry, it's incredibly sour and slightly mushy from dethawing but it's probably the first piece of fruit you've eaten in months. Around you dishes from the kitchen are being laid out and initiates are taking their places. The three initiates who you've sat next to are happily talking amongst themselves. The one next to you has both ears pierced and large gold hoops hanging from each ear, the one across from you has manipulated the hood of their robe so that it rakishly frames their face, the one diagonal from you seems shrunken into themselves, like they're ill or cold. They're talking about altering the fabric make up for robe fabrication.
 
 The first course is a tempeh salad, with spinach, sweet peppers, cabbage and the peanut salad dressing you made.
 
@@ -20,6 +24,10 @@ The dessert is cardamom sticky rice with a blueberry compote.
 [[Eat the sticky rice->Dining dessert]]
 
 :: Dining dessert
-The sunken in initiate offers to dish out some sticky rice for you. They brandish slightly larger spoonfuls than you might have requested, but you don't mind spending a bit of extra time to finish your portion. People start tidying up almost immediately. You find yourself carrying a stack of plates into the kitchen and leaving them by an initiate that's methodically loading the dishwasher. They nod at you.(set: $siteState to "postDinner")(set: $kitchenState to "tidyingBegins")(set: $diningState to "kitchenShift")
+{(set: $northText to "Dining")
+(set: $eastText to "")
+(set: $location to "Kitchen")
+(set: $westText to "Hydroponics")
+(set: $southText to "")}The sunken in initiate offers to dish out some sticky rice for you. They brandish slightly larger spoonfuls than you might have requested, but you don't mind spending a bit of extra time to finish your portion. People start tidying up almost immediately. You find yourself carrying a stack of plates into the kitchen and leaving them by an initiate that's methodically loading the dishwasher. They raise their eyebrows at you.(set: $siteState to "postDinner")(set: $kitchenState to "tidyingBegins")(set: $diningState to "kitchenShift")
 
-(display: "Kitchen exits")
+(display: "Kitchen")

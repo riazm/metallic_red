@@ -66,6 +66,7 @@ Ship
 Site
 [[Day 993->site arrival]]
 [[Lobby]]
+(link: "Day 994")[(set: $siteState to "morning")(set: $kitchenState to "quietMorning")(set: $diningState to "morning")(goto:"Dormitory")]
 [[Salad Dressing->Dressing intro]]
 [[conversations test]]
 

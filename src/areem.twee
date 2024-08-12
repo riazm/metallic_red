@@ -1,5 +1,9 @@
 :: Areem conversation 1
-Areem looks up from the pan of onions he's tending. There's a moment where he can't place you, but as soon as he does he puts the pan down and throws his hands up in the air.
+{(set: $northText to "")
+(set: $eastText to "")
+(set: $location to "")
+(set: $westText to "")
+(set: $southText to "")}Areem looks up from the pan of onions he's tending. There's a moment where he can't place you, but as soon as he does he puts the pan down and throws his hands up in the air.
 
 "Hello!" He shouts over the noise of the kitchen. He wipes his hands on a towel hanging from his waist and pulls you into a hug. He smells of stale oil and fresh alliums.
 

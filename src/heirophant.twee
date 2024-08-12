@@ -1,5 +1,9 @@
 :: Hierophant 1
-"Come come, enter!"
+{(set: $northText to "")
+(set: $eastText to "")
+(set: $location to "")
+(set: $westText to "")
+(set: $southText to "")}"Come come, enter!"
 
 The voice responds instantly to your knock, and continues uninterrupted as you open the door.
 
@@ -35,7 +39,7 @@ The Hierophant holds your gaze until you look away. For the first time since you
 :: Hierophant 5
 "And so, to business then. What has brought you here?"
 
-[["I don't think I want to be part of the mysteries anymore."->Hierophant 6]]
+[["I don't want to be part of this anymore."->Hierophant 6]]
 
 :: Hierophant 6
 The Hierophant smiles warily.
@@ -92,7 +96,9 @@ You reach under your robe to unsnap the pocket which holds your jade figurine. Y
 
 "I understand entirely."
 
-You walk out of the office into the darkened hallway and begin to make your way back to the Buraq Class Personal Space Vehicle [[*Metallic Red*->End Survey]].
+You walk out of the office.
+
+You begin to make your way back to the Buraq Class Personal Space Vehicle [[*Metallic Red*->End Survey]].
 
 :: End
 (live: 5s)[(go-to: "menu screen")]

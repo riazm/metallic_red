@@ -268,7 +268,11 @@ You snap awake, feeling like you were searching for something, but you can no lo
 (display: $shipInterior)
 
 :: sleep site
-You hang your robe on a hook next to your bunk and get under the blanket before triggering the privacy screens. The already faint sounds of the dormitory cease immediately. You haven't slept in a normal bed for months but before long you begin to drift off. (live: 6s)[(go-to: "sleep site2")]
+{(set: $northText to "")
+(set: $eastText to "")
+(set: $location to "")
+(set: $westText to "")
+(set: $southText to "")}You hang your robe on a hook next to your bunk and get under the blanket before triggering the privacy screens. The already faint sounds of the dormitory cease immediately. You haven't slept in a normal bed for months but before long you begin to drift off. (live: 6s)[(go-to: "sleep site2")]
 
 :: sleep site2 [sleep]
 (live: 3s)[(go-to: "sleep site3")]
@@ -280,7 +284,7 @@ You wake to a gentle chiming noise. It takes you a second to work out what's goi
 
 Then they smile enigmatically and leave. (set: $siteState to "morning")(set: $kitchenState to "quietMorning")(set: $diningState to "morning")
 
-[[Get up->Sleeping quarters]]
+[[Get up->Dormitory]]
 
 
 
