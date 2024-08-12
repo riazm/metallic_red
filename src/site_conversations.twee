@@ -9,27 +9,42 @@ what a person should be.
 
 I can't change things. I don't want to change things. I must change things. I can't change things. I don't want to change things. I must change things.
 
-
-
 I dreamt I saw an an owl in daylight. on a branch, I pointed up at it as it sat there in a ray of sun.
 
-
-
 Rats on the riverbank. Mushrooms from the soil. 
+
+:: conversations test
+(debug:)(display: "site conversation display")
+
+[[conversations test]]
+
+:: site conversation display
+{
+
+
+(if: $conversations is not an array)[
+     (set: $conversations to (a: "responsibility", "steering", "whiteboard", "movement", "owl", "change", "robotics", "laurel"))
+]
+
+(set: $convChance to (random: 1,4))
+(if: $convChance is 1)[
+     (display: "site conversation " + (nth: visits, ...$conversations))
+]
+}
 
 :: site conversation responsibility
 You overhear a voice saying:
 
-"I'm responsible for getting into that state, I'll take responsibility for what happens when I'm in that state. But I want to know, just for my own sake, is it really me who acts like that?""
+"I'm responsible for getting into that state, I'll take responsibility for what happens when I'm in that state. But I want to know, just for my own sake, which part of me is it that comes out then?"
 
 
 :: site conversation steering
-An initiate nearby is writing something down in big letters on a piece of paper.
+An initiate nearby is writing something in big letters on a piece of paper.
 
 I'M STEERING THE HORSE WHERE THE HORSE WANTS TO GO
 
 :: site conversation whiteboard
-An initiate crossing the room mutters to herself.
+An initiate crossing the room mutters to a friend.
 
 "All I ever do is evaluate, modify, experiment, repeat."
 
@@ -67,6 +82,7 @@ Two initiates are carrying a heavy maintenance robot between them.
 
 "I would rather sweep than have to do a maintenance shift on these things."
 
+
 :: site conversation laurel
 The initiate with the laurel tattoo is talking to another initiate you feel like you might recognise but can't quite place.
 
@@ -79,3 +95,4 @@ One of the more senior initiates recognises you and starts to make small talk. I
 "He's fine," you say. "I should probably get going though. I've got to check on something."
 
 
+:: site conversation robotics 2

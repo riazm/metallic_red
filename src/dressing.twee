@@ -66,7 +66,7 @@ It tastes (display: "brightness") up front, with a (display: "flavourstrength") 
 (else-if: $ratio > 0.095)[slightly salty(set: $flavourstrengthScore to 1)]
 (else-if: $ratio > 0.08)[strong(set: $flavourstrengthScore to 2)]
 (else-if: $ratio > 0.06)[nice(set: $flavourstrengthScore to 3)]
-(else-if: $ratio > 0.04)[mild(set: $flavourstrengthScore to 2)]
+(else-if: $ratio > 0.04)[vague(set: $flavourstrengthScore to 2)]
 (else-if: $ratio > 0.03)[weak(set: $flavourstrengthScore to 1)]
 (else-if: $ratio > 0.02)[extremely weak(set: $flavourstrengthScore to 0)]
 (else:)[overly bland(set: $flavourstrengthScore to 0)]}

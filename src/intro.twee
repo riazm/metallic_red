@@ -57,7 +57,7 @@ Click to start on a different day., only 987 and 993 work
 
 Ship
 (link: "Day 987")[(goto: "Ship Interior987")]
-(link: "Day 988")[(set: $tabs to 4)(set: $day to "987")(display: "morning")(goto: "Ship interior988")]
+(link: "Day 988")[(set: $tabs to 4)(set: $day to "987")(display: "morning")(goto: "Ship Interior988")]
 (link: "Day 989")[(set: $tabs to 3)(set: $day to "988")(display: "morning")(goto: "Ship Interior989")]
 (link: "Day 990")[(set: $tabs to 3)(set: $day to "989")(display: "morning")(goto: "Ship Interior990")]
 (link: "Day 991")[(set: $tabs to 3)(set: $day to "990")(display: "morning")(goto: "Ship Interior991")]
@@ -67,6 +67,7 @@ Site
 [[Day 993->site arrival]]
 [[Lobby]]
 [[Salad Dressing->Dressing intro]]
+[[conversations test]]
 
 :: ideas
 Early on add more stuff about the ship, introduce the nutrisynth and the hydroponics station
@@ -90,11 +91,13 @@ Overheard conversation about getting angry with something.
 
 
 
-<!--This loads the east/north/south/west/ text into the sidebar-->
+<!--Add -(append: ?Sidebar)[hook to get this to to load the east/north/south/west/ text into the sidebar, if we so wish to do so-->
 
-:: Sidebar [footer]
-(append: ?Sidebar)[
-{<div class="container">
+:: Sidebarload [footer]
+
+{
+<div class="center">
+<div class="container">
   <div class="item"></div>
   <div class="item">
     (if: $northText is not 0)[
@@ -122,5 +125,6 @@ Overheard conversation about getting angry with something.
     ]
   </div>
   <div class="item"></div>
+</div>
 </div>}
-]
+

@@ -1,6 +1,6 @@
 :: elliptical
 {You put some fun music on, set the elliptical to the easiest setting and begin to glide, 
-(if: $elliptical + $Pilates + $ping pong > 1)[(set: $elliptical to 0)but after a few strides a discordant grinding sound starts to come from the machine. The resistance increases further and further until the arms are barely moving.
+(if: $elliptical + $Pilates + $pingpong > 1)[(set: $elliptical to 0)but after a few strides a discordant grinding sound starts to come from the machine. The resistance increases further and further until the arms are barely moving.
 
 <p>You get off to take a look at what's happened. It looks like the resistance function has seized up.
 (if: $pilates is 1 or $pingpong is 1)[<p>]
