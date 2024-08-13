@@ -31,11 +31,12 @@
 
 }
 
-:: menu screen
+:: menu screen [title]
+<img src="metallic_red_images/metallictarot1.jpg" class=center>
 
-Metallic Red v0.01
+Metallic Red v0.02
 
-[[Start->Ship Interior987]]
+[[Start->before playing]]
 
 [[Chapter Select]]
 
@@ -51,6 +52,8 @@ Hello! Thank you for playing the early version of my game!
 - If there's any obvious problems like typos, bugs, passages not making sense etc I would also like to know.
 
 - There's a tiny google forms survey at the end where I try to extract a bit more information from you, it would be useful if you filled me in!
+
+[[Begin->Ship Interior987]]
 
 :: Chapter Select
 Click to start on a different day., only 987 and 993 work
