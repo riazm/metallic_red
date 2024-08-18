@@ -14,9 +14,7 @@
 (set: $southText to "Lobby")
 }You're inside the main living quarters on site. There's a large bookshelf on the wall and a few consoles with display units. The rest of the room is taken up by some communal floor couches.
 
-(if: $siteState is "preDinner")[A pair of younger initiates are gathered around one of the display units.
-(display: "site conversation display")](if: $siteState is "postDinner")[Groups of initiates who don't want to go to sleep are lying on some of the couches, talking.
-(display: "site conversation display")](if: $siteState is "morning")[There's nobody here.](if: (history:) contains "Laurel conversation 2")[(set: $laurelConvo to 1)](else:)[(set: $laurelConvo to 0)](if: $exploredNorth + $exploredDining + $exploredGym + $exploredUnderground is 4 and $laurelConvo is 0)[
+(if: $siteState is "preDinner")[A pair of younger initiates are gathered around one of the display units.(display: "site conversation display")](if: $siteState is "postDinner")[Groups of initiates who don't want to go to sleep are lying on some of the couches, talking.(display: "site conversation display")](if: $siteState is "morning")[There's nobody here.](if: (history:) contains "Laurel conversation 2")[(set: $laurelConvo to 1)](else:)[(set: $laurelConvo to 0)](if: $exploredNorth + $exploredDining + $exploredGym + $exploredUnderground is 4 and $laurelConvo is 0)[
 
 You're examining the volumes on the bookshelf when you hear a shuffling behind you. It's the initiate who met you at the cave entrance. You notice they have a tattoo of a laurel leaf behind their left ear. 
 
@@ -32,10 +30,9 @@ You're examining the volumes on the bookshelf when you hear a shuffling behind y
 (set: $southText to "Recreational")
 
 
-(set: $exploredNorth to 1)}There are several bunk beds here. (if: $siteState is "morning")[Clearly you're the last person to wake up, all of the other beds have been made and tidied.](if: $siteState is "preDinner")[Most have a scattering of personal effects or a dent in the pillow indicating that they are occupied.
-(display: "site conversation display")](else-if: $siteState is "postDinner")[The room has filled up, people are slouching around in their night clothes, carrying their toiletries and getting ready for bed. There's a robed initiate lying on one of the bunks reading. They give you a slow, kingly nod when you walk in and then go back to their book.
+(set: $exploredNorth to 1)}There are several bunk beds here. (if: $siteState is "morning")[Clearly you're the last person to wake up, all of the other beds have been made and tidied.](if: $siteState is "preDinner")[Most have a scattering of personal effects or a dent in the pillow indicating that they are occupied.(display: "site conversation display")](else-if: $siteState is "postDinner")[The room has filled up, people are slouching around in their night clothes, carrying their toiletries and getting ready for bed. There's a robed initiate lying on one of the bunks reading. They give you a slow, kingly nod when you walk in and then go back to their book.
 
-The bunk you normally slept in is free.
+The bunk you used to sleep in is free.
 
 [[Go to bed->sleep site]]]
 
@@ -49,8 +46,7 @@ The bunk you normally slept in is free.
 
 }You're inside the hydroponics room, a much larger and more brightly lit chamber than most of the others on the site. Plants and even some smaller trees sit in large beds of gravel that appears to be made of the same stone as the walls of the cave complex. Probably leftover aggregate from construction of the site. The room smells damp, like a river bed.(if: $siteState is "preDinner")[
 
-The lights above are blindingly bright and clear. If you look up through the canopy of a nearby lemon tree and close your eyes, you could believe you're on earth somewhere.
-(display: "site conversation display")
+The lights above are blindingly bright and clear. If you look up through the canopy of a nearby lemon tree and close your eyes, you could believe you're on earth somewhere.(display: "site conversation display")
 ](if: $siteState is "postDinner")[
 
 The lights have been turned low to simulate night. You can hear a faint gurgle as the growth solutions are filtered for algae.](if: $siteState is "morning")[
@@ -65,9 +61,7 @@ The lights seem even brighter than they did yesterday.]
 (set: $westText to "")
 (set: $southText to "Hydroponics")
 
-}You're inside the workshops. The room is filled with fabricators and roboateliers sitting neatly on workbenches. Tools are obsessively organised on gridded pegboards stuck to the bare cave walls. There are smaller hatches leading from the room which you assume are used by maintenance robots.
-
-(if: $siteState is "preDinner")[(display: "site conversation display")]
+}You're inside the workshops. The room is filled with fabricators and roboateliers sitting neatly on workbenches. Tools are obsessively organised on gridded pegboards stuck to the bare cave walls. There are smaller hatches leading from the room which you assume are used by maintenance robots.(if: $siteState is "preDinner")[(display: "site conversation display")]
 
 :: Kitchen
 {(set: $northText to "Dining")
@@ -110,9 +104,7 @@ With your hands now empty you see little else to do except sit down. Several gro
 (set: $westText to "")
 (set: $southText to "")}(set: $exploredGym to 1)The site gym is mostly focused on bodyweight equipment with a few cardio machines. Pilates mats and rubber resistance bands are hung up on the wall.
 
-(if: $siteState is "preDinner")[Someone you don't recognise is spinning out a leisurely pace on a stationary bike whilst watching a video that shows a lot of mountainous scenery from an uninhabited planet.
-
-(display: "site conversation display")](else-if: $siteState is "postDinner")[Someone is doing a slow yoga routine to prepare for bed. They look very graceful.](else:)[The room is completely empty. All the equipment is tidied away.]
+(if: $siteState is "preDinner")[Someone you don't recognise is spinning out a leisurely pace on a stationary bike whilst watching a video that shows a lot of mountainous scenery from an uninhabited planet.(display: "site conversation display")](else-if: $siteState is "postDinner")[Someone is doing a slow yoga routine to prepare for bed. They look very graceful.](else:)[The room is completely empty. All the equipment is tidied away.]
 
 
 
@@ -155,7 +147,7 @@ To the North there are double doors set in a huge arch. To the East is a normal 
 (set: $eastText to "")
 (set: $location to "Hierophant's Chambers")
 (set: $westText to "Lower Corridor")
-(set: $southText to "")}(set: $exploredUnderground to 1)(if: $siteState is "preDinner")[As you approach the door you hear voices behind it. The one of them you recognise, the oddly accented initiate who met you at the entrance to the site. You assume the one you don't recognise is the new Hierophant. They're discussing minor administrative issues. You don't really feel like interrupting.](else-if: $siteState is "postDinner")[The light under the office door is gone. The Hierophant has his own quarters behind his office, not that you've ever seen them.](if: $siteState is "morning")[You can hear small sounds coming from inside the Hierophant's office.
+(set: $southText to "")}(set: $exploredUnderground to 1)(if: $siteState is "preDinner")[As you approach the door you hear voices behind it. One of them you recognise as the oddly accented initiate who met you at the entrance to the site. You assume the one you don't recognise is the new Hierophant. They're discussing minor administrative issues. You don't really feel like interrupting.](else-if: $siteState is "postDinner")[The light under the office door is gone. The Hierophant has his own quarters behind his office, not that you've ever seen them.](if: $siteState is "morning")[You can hear small sounds coming from inside the Hierophant's office.
 
 [[Knock->Hierophant 1]]]
 

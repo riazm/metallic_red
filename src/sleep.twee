@@ -2,15 +2,16 @@
 (set: $sleepscore to $tabs + $checkhydro)
 
 :: morning
-{(set: $day to $day+1)
+{(set: $day to (text:(num: $day)+1))
 (set: $exercise to "")
 (set: $shipInterior to "Ship Interior" + (string: $day))
 (set: $tarotread to 1)
 (display: "age plants")
 (set: $eatingpaste to 0)}
 
+
 :: sleep intro
-(set: $dreampassage to "sleep" + (str: $day))You cinch down the belts on your sleeping sack (either: "tightly", "gently") and turn the light cycle to (either: "nocturnal", "twilight"). (either:"Sleep comes quickly.", "You float there for a while before passing out.", "You feel wide awake so you read for a while before turning in.", "You barely have time to think before you go under." ) (live: 3s)[(go-to: $dreampassage)]
+(set: $dreampassage to "sleep" + (str: $day))You cinch down the belts on your sleeping sack (either: "tightly", "gently") and turn the light cycle to (either: "nocturnal", "twilight"). (either:"Sleep comes quickly.", "You float there for a while before passing out.", "You feel wide awake so you read for a while before turning in.", "You barely have time to think before you go under." ) (live: 5s)[(go-to: $dreampassage)]
 
 :: sleep987 [sleep]
 You're in your childhood home. It's high summer. You are a child. You walk through a familiar door that opens onto the street in front of your [[house->sleep987 street]]. 
@@ -108,16 +109,16 @@ You wake up, worried that the nutritional synthesiser isn't working, but when yo
 :: sleep990 [sleep]
 You are sitting in the passenger seat of the PSV *Metallic Red*. Your father is in the pilot's seat next to you with the harness disconnected and hanging loose. A brown paper bag is on the console between you with a smell of fast food coming from it. Your father is eating a burger. The ship is planetside and the airlock is disengaged with light streaming through it. You're terrified because he never let you eat gravity food in any of the PSVs he piloted, whether they were landed or not.
 
-"I think it'll be fine to eat in this one time." your father says, reading your mind whilst chewing on his burger. "I think this craft can take it."
+"I think we'll be fine eating inside this one time." your father says, reading your mind whilst chewing on his burger. "I think this craft can take it."
 
 Take a [[bite->sleep990 burger]] of your burger or try to [[say->sleep990 talk]] something.
 
 :: sleep990 burger [sleep]
 You take a bite of the burger you realise is in your hands. The contents slide around inside the bun.
 
-You watch him take another bite and a bit of sauce covered onion escapes the disintigrating bun and falls onto the flight console.
+You watch him take another bite and a bit of sauce covered onion escapes the disintegrating bun and falls onto the flight console.
 
-Try to [[clean->sleep990 clean]] the console or ask why he's making a [[mess->sleep990 mess]]
+Try to [[clean->sleep990 clean]] the console or ask why he's making a [[mess->sleep990 mess]].
 
 :: sleep990 talk [sleep]
 "You would never let us eat in your ship," you say.
@@ -128,14 +129,14 @@ You feel a level of physical annoyance that you can't convey with your words. Yo
 
 You watch him take another bite, a bit of sauce covered onion escapes the disintigrating bun and falls onto the flight console.
 
-Try to [[clean->sleep990 clean]] the console or ask why he's making a [[mess->sleep990 mess]]
+Try to [[clean->sleep990 clean]] the console or ask why he's making a [[mess->sleep990 mess]].
 
 :: sleep990 clean [sleep]
 You grab a spare napkin and try to wipe away the onion and sauce from the console. Everything just smears around, as though the napkin itself was already covered in sauce. you hear your father speaking behind you.
 
 "Why try to clean it, this ship won't fly again."
 
-Ignore him and [[keep->sleep990 clean2]] cleaning or tell [[him->sleep990 fly again]] it willl
+Ignore him and [[keep->sleep990 clean2]] cleaning or tell [[him->sleep990 fly again]] it willl.
 
 :: sleep990 mess [sleep]
 "What are you doing?" you say, the words tumble out of your mouth before you can even really form them. "Why are you making a mess?"
@@ -155,13 +156,13 @@ You get up and walk towards the open [[airlock->sleep990 airlock]].
 Your father seems totally unbothered and keeps chewing his burger. He doesn't seem to react in any way. You want to shake him. Instead you walk towards the open [[airlock->sleep990 airlock]].
 
 :: sleep990 airlock [sleep]
-Light is pouring through the airlock into the dim ship interior. Maybe the first time that light has shone into the windowless PSV *Metallic Red* in decades. You reach the airlock and look outside. The piercingly bright light is overwhelming, but when your eyes adjust you look out at a pastoral landscape of green fields and hegerows. You turn back to look at your father, sitting in the pilot's seat and turned away from you. You cannot see his face.
+Light is pouring through the airlock into the dim ship interior. Maybe the first time that light has shone into the windowless PSV *Metallic Red* in decades. You reach the airlock and look outside. The light is overwhelming, but when your eyes adjust you look out at a pastoral landscape of green fields and hegerows. You turn back to look at your father; sitting in the pilot's seat and turned away from you. You cannot see his face.
 {
 (set: $tabs to 3)
 (display: "morning")
-}<p>You try to [[call->awaken 990]] out to him.
+}<p>You try to [[call->awaken990]] out to him.
 
-:: awaken 990
+:: awaken990
 You wake up with your voice catching in your throat.
 
 (display: $shipInterior)
@@ -173,35 +174,35 @@ It's the day of your initiation and you've slept in. You should have been at the
 You reach the stairwell to the initiation chamber, the sides are hewn roughly out of rock, but the stairs are chiselled with precision and well finished. You slip down the stairs, nearly [[flying->sleep 991 remember]]. 
 
 :: sleep 991 remember [sleep]
-You enter the Hall of Refraction. Ultrasonic clicks and red lascans fan the room sequentially. Elaborate sensing equipment and bundles of cables line the walls with panels of spiked dampening foam filling the gaps between them. Almost none of the original rockface is visible. A small circle of 7 candlestands have been placed in the middle of the room, the only real light. You walk forward and [[enter the circle->sleep 991 circle]].
+You enter the Hall of Refraction. Ultrasonic clicks and red lascans fan the room sequentially. Elaborate sensing equipment and bundles of cables line the walls with panels of spiked dampening foam filling the gaps between them. Almost none of the original rockface is visible. A small circle of 7 candle stands have been placed in the middle of the room, the only real light. You walk forward and [[enter the circle->sleep 991 circle]].
 
 :: sleep 991 circle [sleep]
-Taking your place in the center of the candle circle you can no longer make out the walls of the room. You wait there, out of breath. The ultrasonic clicks and laser patterns stop and the room goes silent. A circle of initiated members come into view beyond the candles, identically robed but with their faces individually obscured by a projector somewhere.
+Taking your place in the centre of the candle stands you can no longer make out the walls of the room. You wait there, out of breath. The ultrasonic clicks and laser patterns stop and the room goes silent. A circle of initiated members come into view beyond the candles, identically robed but with their faces individually obscured by a projector somewhere.
 
-One of them directly behind you asks you a [[question->sleep 991 fasted]].
+The one directly behind you asks a [[question->sleep 991 fasted]].
 
 :: sleep 991 fasted [sleep]
 "Have you fasted?"
 
-[["Yes"->sleep 991 kyreon]]
+[["Yes."->sleep 991 kyreon]]
 
 :: sleep 991 kyreon [sleep]
 "Have you drunk the kykeon?"
 
-[["Yes"->sleep 991 kiste]]
+[["Yes."->sleep 991 kiste]]
 
 :: sleep 991 kiste [sleep]
 "Have you taken from the kiste?"
 
-[["Yes"->sleep 991 calathus]]
+[["Yes."->sleep 991 calathus]]
 
 :: sleep 991 calathus [sleep]
 "Place your figurine in the kalathus."
 
-[["Yes"->sleep 991 darkness]]
+[["Yes."->sleep 991 darkness]]
 
 :: sleep 991 darkness [sleep]
-You put your jade figurine in the basket one of the initiates hands out. They place it on the floor and for a while you all stand at your positions in silence. Then simultaneously, the initiates surrounding you take a step forward and each blows out the candle nearest them. Total darkness descends. Your head begins to spin as your eyes fail to distinguish anything. Then the laser pattern and the ultrasonics fire up again. You know that there are other waves bombarding you, low dose x and radio waves. Several additional inputs gathered from the week you've been staying in the site are being studied and processed. DNA and gut biome measurements ritually taken, a machine administered psychological analysis. All being fed into a compute engine somewhere. The light show stops and you retrieve your [[figurine->sleep 991 metallic]].
+You put your jade figurine in the basket one of the initiates holds out. They place it on the floor and for a while you all stand at your positions in silence. Simultaneously the initiates surrounding you take a step forward and each blows out the candle nearest them. Total darkness descends. Your head begins to spin as your eyes fail to distinguish anything. The laser pattern and the ultrasonics fire up again. You know that there are other waves bombarding you, low dose x and radio waves. Several additional inputs gathered from the week you've been staying in the site are being studied and processed. DNA and gut biome measurements, a machine administered psychological analysis. All being fed into a compute engine somewhere. The light show stops and you retrieve your [[figurine->sleep 991 metallic]].
 
 :: sleep 991 metallic [sleep]
 When you stand up you are inside the PSV *Metallic Red*. None of your alterations have been carried out but the worn pilot's chair has been replaced. There are several posters for old bands you've never listened to velcroed to the walls. The nutritional synthesiser is an Abqaiq model that you would never buy.
@@ -224,7 +225,7 @@ You can see the circle of initiated members again. You've lost track of which do
 [[The chorus->awaken 991]]
 
 :: awaken 991
-Before you can answer, you wake from the dream. That morning as you brush your teeth in front of the bathroom mirror it feels more portentous than normal, but you can't remember why.
+Before you can answer, you wake from the dream. As you brush your teeth in front of the bathroom mirror it feels portentous, but you can't remember why.
 
 (display: $shipInterior)
 
@@ -232,7 +233,7 @@ Before you can answer, you wake from the dream. That morning as you brush your t
 You're in the company house. Whitewashed walls and  dark wood flooring. All of the fabrics are undyed. There doesn't seem to be a single object made of plastic. The view out of the window is cloudy, but you can see the [[pebble->sleep 992 beach]] beach.
 
 :: sleep 992 beach [sleep]
-The stones are large, hard to walk on. Seagulls are wheeling silently ahead. The mist makes it impossible to tell where the sea ends and the sky begins. The beach is as flat as the land it emerges from. The sky is a huge upside down bowl that you are standing in the center of.
+The stones are large, hard to walk on. Seagulls are wheeling silently ahead. The mist makes it impossible to tell where the sea ends and the sky begins. The beach is as flat as the land it emerges from. The sky is a huge upside down bowl that you are standing in the centre of.
 
 Two of your reports from your old job are [[coming out of the water->sleep 992 reports]].
 

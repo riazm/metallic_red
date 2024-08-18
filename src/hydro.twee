@@ -1,5 +1,5 @@
 :: hydro blue
-(if: $checkhydro is 1)[There's a [[blue light->Check hydro]] blinking on the hydroponics array]
+(if: $checkhydro is 1)[There's a [[blue light->Check hydro]] blinking on the hydroponics array].
 
 :: age plants
 {[(set: $checkhydro to 0)](set: $hydro to (altered: _plant via _plant + (dm: "age", _plant's age + 24), ...$hydro))

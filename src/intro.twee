@@ -56,7 +56,7 @@ Hello! Thank you for playing the early version of my game!
 [[Begin->Ship Interior987]]
 
 :: Chapter Select
-Click to start on a different day., only 987 and 993 work
+Click to start on a different day.
 
 Ship
 (link: "Day 987")[(goto: "Ship Interior987")]
@@ -71,7 +71,7 @@ Site
 [[Lobby]]
 (link: "Day 994")[(set: $siteState to "morning")(set: $kitchenState to "quietMorning")(set: $diningState to "morning")(goto:"Dormitory")]
 [[Salad Dressing->Dressing intro]]
-[[conversations test]]
+
 
 :: ideas
 Early on add more stuff about the ship, introduce the nutrisynth and the hydroponics station

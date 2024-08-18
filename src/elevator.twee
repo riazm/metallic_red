@@ -27,12 +27,12 @@ Before you leave you rip the jade figurine from its velcro backing and tuck it i
 (display: "gathermenu")
 
 :: gather sleeping
-You unclip a sliding drawer from the wall of your quarters and pull out the only shoes you brought appropriate for wearing in macrogravity, a pair of gold slip on sandals. You replace your Asics orbital tabis into the drawer they were in and secure it.(set: $sleepingq to 0)
+You unclip a sliding drawer from the wall of your quarters and pull out the only shoes you brought that are appropriate for wearing in macrogravity, a pair of gold slip on sandals. You replace your Asics orbital tabis into the drawer they were in and secure it.(set: $sleepingq to 0)
 
 (display: "gathermenu")
 
 :: exit ship
-The airlock closes behind you, cycles twice and sprays you with a light disinfectant mist. Then the final bulkhead slides back. You float out of the PSV *Metallic Red* for the first time in several months into an anonymous skybridge. The automated systems which allowed the ship to dock without human intervention mean that you're completely alone as you pull yourself along worn handrails towards an open elevator car that you can see ahead of you.
+The airlock closes the door behind you, cycles twice and sprays you with a light disinfectant mist. Then the final bulkhead slides back. You float out of the PSV *Metallic Red* for the first time in several months into an anonymous skybridge. The automated systems which allowed the ship to dock without human intervention mean that you're completely alone. You pull yourself along worn handrails towards an open elevator car..
 
 [[Enter the space elevator->space elevator]]
 
@@ -42,7 +42,7 @@ The elevator has strapped chairs to help ease the transition from weightlessness
 There's just one button to [[press->site journey]], a translucent lozenge with an arrow pointing down.
 
 :: site journey
-The elevator car is fully shielded on all sides for protection from cosmic rays, but there's an infographic display unit that shows distance to the planetary surface. The infographic says that the trip will take several hours. When you flip the display to an entertainment channel it just displays an error code that you don't understand. You spend a couple of minutes trying various combinations of commands to see if any of them work. None of them do except for the camera feed from external which shows the planetary surface gradually growing closer.
+The elevator car is fully shielded on all sides for protection from cosmic rays but there's an infographic display unit that shows distance to the planetary surface. The display says that the trip will take several hours. When you flip the display to an entertainment channel it just displays an error code that you don't understand. You spend a couple of minutes trying various combinations of commands to see if any of them work. None of them do. The only other functional channel is the external camera feedd which shows the planetary surface gradually growing closer.
 
 [[Wait->site journey 2]]
 
@@ -61,7 +61,7 @@ You unclip from the harness and nearly fall over trying to push yourself out of 
 
 "No uninitiated may pass into the greater cave system. Enter this airlock and wait."
 
-The circular metal door slides open. Beyond it the walkway and artificial lighting end. There's a circular rock tunnel the same height and width of the doorway itself, leading into darkness. Gravel has been piled on the floor to provide a flat surface to walk on. About 200 metres away at the end of the tunnel you can see a light.
+The circular metal door slides open. Beyond it the walkway and artificial lighting end. There's a circular rock tunnel the same height and width as the doorway itself leading into darkness. Gravel has been piled on the floor to provide a flat surface to walk on. About 200 metres away at the end of the tunnel you can see a light.
 
 [[Head for the light->site tunnel]]
 

@@ -64,7 +64,7 @@ Your FTL SubSpacePOST trajectory has been calculated and locked in. Please do no
 :: receive delivery [console]
 Local system mass driver Antigone-G12 is preparing to send your parcel... (live: 1s)[Ready(stop:)]
 Payload launch... (live: 3s)[Success(stop:)]
-Trajectory Check... (live:4.5s)[OK(stop:)]
+Trajectory check... (live:4.5s)[OK(stop:)]
 Payload arrival... (live: 5s)[[8.10s]<eta|(stop:)] {
 (live: 8s)[
        (replace: ?eta)[4.89s]

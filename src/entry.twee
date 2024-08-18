@@ -56,7 +56,7 @@ There's a [[tarot deck->read tarot]] floating next to you.](else:)[
 
 (if: $tabs >0)[There's a [[red light->Check console]] blinking on a display up ahead.
 ](if: $checkhydro is 1)[(display: "hydro blue")
-](if: $checkhydro + $tabs is 0)[You feel like the rations tastes slightly more pleasant than usual tonight, the nutrisynth is obviously running smoothly. Soon after you finish you decide it's time to [[sleep->sleep intro]].
+](if: $checkhydro + $tabs is 0)[You feel like the rations taste slightly more pleasant than usual tonight, the nutrisynth is obviously running smoothly. Soon after you finish you decide it's time to [[sleep->sleep intro]].
 ]]
 
 :: Ship Interior991

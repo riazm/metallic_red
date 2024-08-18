@@ -64,12 +64,12 @@ It tastes (display: "brightness") up front, with a (display: "flavourstrength") 
 {(set: $ratio to $salt/$volume)
 (if: $ratio > 0.11)[very salty(set: $flavourstrengthScore to 0)]
 (else-if: $ratio > 0.095)[slightly salty(set: $flavourstrengthScore to 1)]
-(else-if: $ratio > 0.08)[strong(set: $flavourstrengthScore to 2)]
+(else-if: $ratio > 0.08)[effectively salted(set: $flavourstrengthScore to 2)]
 (else-if: $ratio > 0.06)[nice(set: $flavourstrengthScore to 3)]
-(else-if: $ratio > 0.04)[vague(set: $flavourstrengthScore to 2)]
-(else-if: $ratio > 0.03)[weak(set: $flavourstrengthScore to 1)]
-(else-if: $ratio > 0.02)[extremely weak(set: $flavourstrengthScore to 0)]
-(else:)[overly bland(set: $flavourstrengthScore to 0)]}
+(else-if: $ratio > 0.04)[slightly under salted(set: $flavourstrengthScore to 2)]
+(else-if: $ratio > 0.03)[quite under salted(set: $flavourstrengthScore to 1)]
+(else-if: $ratio > 0.02)[extremely underwhelming(set: $flavourstrengthScore to 0)]
+(else:)[very underwhelming(set: $flavourstrengthScore to 0)]}
 
 :: spice
 {(set: $ratio to $spice/$volume)
@@ -91,7 +91,7 @@ It tastes (display: "brightness") up front, with a (display: "flavourstrength") 
 (else-if: $ratio > 0.5)[garlicky but quite sweet(set: $flavourScore to 2)]
 (else-if: $ratio > 0.25)[somewhat sweet(set: $flavourScore to 1)]
 (else-if: $ratio > 0.125)[extremely sweet(set: $flavourScore to 0)]
-(else:)[overly sweet(set: $flavourScore to 0)]}
+(else:)[very sweet(set: $flavourScore to 0)]}
 
 :: thickness
 {(set: $ratio to ($water+$salt+$acid)/($pb+$garlic+$sweet))

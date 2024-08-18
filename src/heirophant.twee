@@ -3,7 +3,7 @@
 (set: $eastText to "")
 (set: $location to "")
 (set: $westText to "")
-(set: $southText to "")}"Come come, enter!"
+(set: $southText to "")}"Come come - enter!"
 
 The voice responds instantly to your knock, and continues uninterrupted as you open the door.
 
@@ -13,12 +13,12 @@ The Hierophant's office could have been as big as the great hall, but it's a mod
 
 "Before we talk more, I must ask, is your father well?"
 
-[["He's good. He sends his regards"->Hierophant 2]]
+[["He's good. He sends his regards."->Hierophant 2]]
 
 :: Hierophant 2
-The Hierophant himself looks the same as he did last time you saw him, but aged. His eyes are more sunken now, the wrinkles around his eyes are more pronounced.
+The Hierophant himself looks the same as he did last time you saw him, only aged. His eyes are more sunken now, the wrinkles around his mouth are more pronounced.
 
-"Excellent. We still think of him fondly, though he would be the last to admit it our colony wouldn't exist without his scholarship and material contributions. His strength of will and focus are legendary."
+"Excellent. We still think of him fondly. Our colony wouldn't exist without his scholarship and material contributions. His strength of will and focus are legendary."
 
 [["The mysteries have always been important to him."->Hierophant 3]]
 
@@ -76,7 +76,7 @@ The hierophant knits his fingers together on the solid stone desktop in front of
 [["I don't want to share it."->Hierophant 10]]
 
 :: Hierophant 10
-"Believe me when I say that I am sorry to hear that, but there's nothing I, personally can do. I can't free you from what you believe your association here means. If you want that it's something you'll have to undo for yourself."
+"Believe me when I say that I am sorry to hear that, but there's nothing I personally, can do. I can't free you from what you believe your association here means. If you want that it's something you'll have to undo for yourself."
 
 Your hand finds itself at the secure pocket which holds your jade figurine.
 
@@ -96,7 +96,7 @@ You reach under your robe to unsnap the pocket which holds your jade figurine. Y
 
 "I understand entirely."
 
-Outside the Hierophant's office you can still hear the sound of the meeting happening in the Great Hall. The fade behind you as you walk up the stairs to the lobby, through the gravel filled corridors to the [[space elevator->Hierophant 13]].
+Outside the Hierophant's office you can still hear the sound of the meeting happening in the Great Hall. They fade behind you as you walk up the stairs to the lobby, through the gravel filled corridors to the [[space elevator->Hierophant 13]].
 
 :: Hierophant 13
 As you wait for the elevator to run its decontamination cycle a wave of panic rolls through you. Your hand reflexively reaches to pat the secure pocket on your chest but it's empty and it takes you a moment to remember why. 

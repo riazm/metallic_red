@@ -22,17 +22,21 @@ Rats on the riverbank. Mushrooms from the soil.
 {
 (if: $conversations is not an array)[
      (set: $conversations to (a: "responsibility", "steering", "whiteboard", "movement", "owl", "change", "robotics", "laurel"))
+(set: $convCounter to 1)]
+
+(set: $convChance to (random: 1,4))}(if: $convChance is 1 and $convCounter > 0)[
+
+(display: "site conversation " + (nth: $convCounter, ...$conversations)){
+(set: $convCounter to $convCounter + 1)
+(if: $convCounter > $conversations's length)[
+     (set: $convCounter to 0)
 ]
-
-(set: $convChance to (random: 1,4))}(if: $convChance is 1)[
-(display: "site conversation " + (nth: visits, ...$conversations))]
-
+}]
 
 :: site conversation responsibility
 You overhear a voice saying:
 
 "I'm responsible for getting into that state, I'll take responsibility for what happens when I'm in that state. But I want to know, just for my own sake, which part of me is it that comes out then?"
-
 
 :: site conversation steering
 An initiate nearby is writing something in big letters on a piece of paper.
@@ -44,12 +48,10 @@ An initiate crossing the room mutters to a friend.
 
 "All I ever do is evaluate, modify, experiment, repeat."
 
-
 :: site conversation movement
 An initiate on a video call in the corner says:
 
 "Spending time trapped makes you relish movement, even if you don't know where you're going."
-
 
 :: site conversation owl
 A younger initiate is talking to an older one.
@@ -64,12 +66,10 @@ The older initiate nods.
 
 "We will cover this in our next session on augury."
 
-
 :: site conversation change
 An initiate walks past chanting to himself.
 
 "I can't change things. I don't want to change things. I must change things. I can't change things. I don't want to change things. I must change things."
-
 
 :: site conversation robotics
 Two initiates are carrying a heavy maintenance robot between them.
@@ -78,17 +78,12 @@ Two initiates are carrying a heavy maintenance robot between them.
 
 "I would rather sweep than have to do a maintenance shift on these things."
 
-
 :: site conversation laurel
 The initiate with the laurel tattoo is talking to another initiate you feel like you might recognise but can't quite place.
 
 "It doesn't have to make sense. Things that make sense can tell us about how a human should be, but things that don't make sense can tell us about the experience of being a human."
 
-
 :: site conversation older
 One of the more senior initiates recognises you and starts to make small talk. It doesn't take long before they ask you about your father.
 
 "He's fine," you say. "I should probably get going though. I've got to check on something."
-
-
-:: site conversation robotics 2
