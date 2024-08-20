@@ -2,7 +2,7 @@
 (set: $sleepscore to $tabs + $checkhydro)
 
 :: morning
-{(set: $day to (text:(num: $day)+1))
+{(set: $day to $day+1)
 (set: $exercise to "")
 (set: $shipInterior to "Ship Interior" + (string: $day))
 (set: $tarotread to 1)
@@ -102,7 +102,7 @@ The wall of the ship in front of you starts to stretch further inwards with each
 } [[completely->awaken989]].
 
 :: awaken989
-You wake up, worried that the nutritional synthesiser isn't working, but when you go to get today's ration from it, you see that it's performing adequately.
+You wake up from the final bang with a jolt.
 
 (display: $shipInterior)
 
@@ -174,7 +174,7 @@ It's the day of your initiation and you've slept in. You should have been at the
 You reach the stairwell to the initiation chamber, the sides are hewn roughly out of rock, but the stairs are chiselled with precision and well finished. You slip down the stairs, nearly [[flying->sleep 991 remember]]. 
 
 :: sleep 991 remember [sleep]
-You enter the Hall of Refraction. Ultrasonic clicks and red lascans fan the room sequentially. Elaborate sensing equipment and bundles of cables line the walls with panels of spiked dampening foam filling the gaps between them. Almost none of the original rockface is visible. A small circle of 7 candle stands have been placed in the middle of the room, the only real light. You walk forward and [[enter the circle->sleep 991 circle]].
+You enter the Hall of Refraction. Ultrasonic clicks and red lascans fan the room sequentially. Elaborate sensing equipment and bundles of cables line the walls with panels of spiked dampening foam filling the gaps between them. Almost none of the original rockface is visible. A small circle of 7 candle stands have been placed in the middle of the room, the only real light. You walk forward and enter the [[circle->sleep 991 circle]].
 
 :: sleep 991 circle [sleep]
 Taking your place in the centre of the candle stands you can no longer make out the walls of the room. You wait there, out of breath. The ultrasonic clicks and laser patterns stop and the room goes silent. A circle of initiated members come into view beyond the candles, identically robed but with their faces individually obscured by a projector somewhere.
@@ -213,7 +213,7 @@ There's a [[red light->sleep 991 sit]] blinking on a display up ahead.
 The console prompts you to log in as someone you've never heard of. You stare at their name on the screen. You don't know them. You don't recognise the ship. The jade figurine in your hand grows so damp you feel like it must be dissolving. You sit on the floor as the projector turns off and the walls of the PSV *Metallic Red* disappear, replaced by the murk of the [[great hall->sleep 991 awaken]].
 
 :: sleep 991 awaken [sleep]
-You can see the circle of initiated members again. You've lost track of which door you entered the room from. You want to leave but you can barely stand up. You get to your knees, then to your feet. The members surrounding you seem closer than before. You stand there dazed for a second. Then the one in front of you reaches inside their robes and pulls out a mirror. The surface is ancient, dim and warped. What do you see?{
+You can see the circle of initiated members again. You've lost track of which door you entered the room from. You want to leave but you can barely stand up. You get to your knees, then to your feet. The members surrounding you seem closer than before. You stand there dazed for a second. The one in front of you reaches inside their robes and pulls out a mirror. The surface is ancient, dim and warped. What do you see?{
 (display: "morning")
 (set: $tabs to 4)} 
 

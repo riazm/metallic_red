@@ -52,9 +52,7 @@ You tweezer a $selectedSeed seed from the dispenser and gently squash it into so
 [[Return->Check hydro]]
 
 :: Harvest the oldest plant
-You keep a pair of secateurs carabinered next to your hydro set up. You unclip it and flip the blade release.
-
-You strip the young leaves off the plant and feed them to the nutrient synth unit. For the next few days you'll have added B vitamins, iron and folate in your rations.{
+They strip the young leaves off the plant and feed them to the nutrient synth unit. For the next few days you'll have added B vitamins, iron and folate in your rations.{
 (set: $hydro to $hydro - (a: $hydro's 1st))
 (set: $nutrisynth to $nutrisynth + 3)
 (if: $nutrisynth > 10)[(set: $nutrisynth to 10)]

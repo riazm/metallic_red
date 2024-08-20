@@ -60,11 +60,11 @@ Click to start on a different day.
 
 Ship
 (link: "Day 987")[(goto: "Ship Interior987")]
-(link: "Day 988")[(set: $tabs to 4)(set: $day to "987")(display: "morning")(goto: "Ship Interior988")]
-(link: "Day 989")[(set: $tabs to 3)(set: $day to "988")(display: "morning")(goto: "Ship Interior989")]
-(link: "Day 990")[(set: $tabs to 3)(set: $day to "989")(display: "morning")(goto: "Ship Interior990")]
-(link: "Day 991")[(set: $tabs to 3)(set: $day to "990")(display: "morning")(goto: "Ship Interior991")]
-(link: "Day 992")[(set: $tabs to 3)(set: $day to "991")(display: "morning")(goto: "Ship Interior992")]
+(link: "Day 988")[(set: $tabs to 4)(set: $day to 987)(display: "morning")(goto: "Ship Interior988")]
+(link: "Day 989")[(set: $tabs to 3)(set: $day to 988)(display: "morning")(goto: "Ship Interior989")]
+(link: "Day 990")[(set: $tabs to 3)(set: $day to 989)(display: "morning")(goto: "Ship Interior990")]
+(link: "Day 991")[(set: $tabs to 3)(set: $day to 990)(display: "morning")(goto: "Ship Interior991")]
+(link: "Day 992")[(set: $tabs to 3)(set: $day to 991)(display: "morning")(goto: "Ship Interior992")]
 
 Site
 [[Day 993->site arrival]]
