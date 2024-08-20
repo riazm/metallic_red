@@ -28,7 +28,6 @@
 (set: $westText to "")
 (set: $eastText to "")
 (set: $southText to "")
-
 }
 
 :: menu screen [title]
@@ -100,35 +99,51 @@ Overheard conversation about getting angry with something.
 :: Sidebarload [footer]
 
 {
+(set: $unexploredChanger to (css: "font-style: italic;"))
 <div class="center">
 <div class="container">
   <div class="item"></div>
   <div class="item">
-    (if: $northText is not 0)[
-      [[$northText]]
+    (if: $northText is not "")[
+         (if: (visited: $northText))[
+            [[$northText]]
+         ](else:)[
+            $unexploredChanger[[[$northText]]]
+         ]
     ]
   </div>  
   <div class="item"></div>
   <div class="item">
-    (if: $eastText is not 0)[
-      [[$eastText]]
+    (if: $eastText is not "")[
+         (if: (visited: $eastText))[
+              [[$eastText]]
+         ](else:)[
+            $unexploredChanger[[[$eastText]]]
+         ]
     ]    
   </div>
   <div class="item">
     $location
   </div>
     <div class="item">
-    (if: $westText is not 0)[
-      [[$westText]]
+    (if: $westText is not "")[
+         (if: (visited: $westText))[
+              [[$westText]]
+         ](else:)[
+            $unexploredChanger[[[$westText]]]
+         ]           
     ]
   </div>
   <div class="item"></div>
   <div class="item">
-    (if: $southText is not 0)[
-      [[$southText]]
+    (if: $southText is not "")[
+        (if: (visited: $southText))[
+          [[$southText]]
+        ](else:)[
+            $unexploredChanger[[[$southText]]]
+        ]
     ]
   </div>
   <div class="item"></div>
 </div>
 </div>}
-

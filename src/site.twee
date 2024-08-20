@@ -1,4 +1,5 @@
 :: Lobby
+(debug:)
 {(set: $northText to "")
 (set: $eastText to "Recreational")
 (set: $location to "Lobby")
