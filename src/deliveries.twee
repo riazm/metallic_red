@@ -1,11 +1,11 @@
-:: check deliveries [console]
+:: check deliveries [terminal]
 (if: $tarotdelivery is "ftl")[Your FTL SubSpacePOST trajectory has been calculated and locked in. Please do not alter your bearing whilst we complete the transfer. Are you ready to receive?]
 (if: $tarotdelivery is "roboatelier")[Your Local RoboAtelier has downloaded construction plans for your recent purchase. Are you ready to assemble?]
 
 - [[Yes->receive delivery tarot]]
 - [[No->$shipInterior]]
 
-:: receive delivery tarot [console]
+:: receive delivery tarot [terminal]
 (if: $tarotdelivery is "ftl")[Local system mass driver Antigone-B1 is preparing to send your parcel... (live: 1s)[Ready(stop:)]
 Payload launch... (live: 3s)[Success(stop:)]
 Trajectory Check... (live:4.5s)[OK(stop:)]
@@ -55,13 +55,13 @@ You pull yourself away from the console and float down ship towards the (if: $ta
 
 [[Pick it up->$shipInterior]]
 
-:: check deliveries 2 [console]
+:: check deliveries 2 [terminal]
 Your FTL SubSpacePOST trajectory has been calculated and locked in. Please do not alter your bearing whilst we complete the transfer. Are you ready to receive?
 
 - [[Yes->receive delivery]]
 - [[No->$shipInterior]]
 
-:: receive delivery [console]
+:: receive delivery [terminal]
 Local system mass driver Antigone-G12 is preparing to send your parcel... (live: 1s)[Ready(stop:)]
 Payload launch... (live: 3s)[Success(stop:)]
 Trajectory check... (live:4.5s)[OK(stop:)]

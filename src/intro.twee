@@ -1,3 +1,18 @@
+:: StoryTitle
+Metallic Red
+
+
+:: StoryData
+{
+	"ifid": "C46F9332-06A1-47E0-8D6D-79F700724FCE",
+	"format": "Harlowe",
+	"format-version": "3.3.8",
+	"start": "menu screen",
+	"zoom": 1
+}
+
+
+
 :: initialising passage [startup] {"position":"25,200","size":"100,100"}
 {
 (set: $tabs to 4)

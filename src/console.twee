@@ -8,7 +8,7 @@
 (set: $currentBrowserTitle to (display: "day" + (string: $day) + "title_" + (string:$tabs)))
 (set: $currentBrowserContent to (display: "day" + (string: $day) + "_" + (string:$tabs)))
 (if: $tabs is 1 and $day is 987)[
-      The console currently has $tabs tabs open.
+      Remaining tabs: $tabs
 
       <br>The foremost one shows $currentBrowserTitle
       <br>
@@ -68,23 +68,23 @@ The deck was created by an artist who works on a children's TV show about wordle
 
 The tarot deck itself doesn't look anything like the TV show, but the illustrations are youthful with strong linework and a sense of play. The deck can pair with any room projector to display common card meanings or even to do full interpretations of cards drawn. 
 
-:: tarotbuy [console]
+:: tarotbuy [terminal]
 (set: $preventclose to false)(set: $tabs to $tabs-1)Select delivery service:
 
 - [[FTL SubSpacePOST->ftldelivery]]
 - [[Local RoboAtelier->roboatelier]]
 
-:: ftldelivery [console]
+:: ftldelivery [terminal]
 {(set: $tarotdelivery to "ftl")}Thank you for selecting FTL SubSpacePOST for your tarot delivery, we are calculating a delivery vector for your package. You will receive a notification when its trajectory is locked in.
 
 [[Return->$shipInterior]]
 
-:: roboatelier [console]
+:: roboatelier [terminal]
 {(set: $tarotdelivery to "roboatelier")}Thank you for selecting Local RoboAtelier for your tarot delivery, we are transmitting the data file now. You will receive a notification when your Local RoboAtelier has received the plans and is ready to print.
 
 [[Return->$shipInterior]]
 
-:: day988title_4 [browser]
+:: day988title_4 [terminal]
 a forum post about buying your own tarot deck. 
 
 :: day988_4 [browser]

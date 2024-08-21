@@ -28,22 +28,27 @@ tw-link
 
 /* the browser effect used for the ship's console type thing */
 tw-story[tags~="browser"] {
-    background-color: #000000;
-    font-family: Monospace;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  background-color: #c3c3c3;
 }
+
 tw-passage[tags~="browser"] {
-    color: #00FF00;
+    color: #000000;
 
 }
 tw-story[tags~="browser"] tw-link, tw-story[tags~="browser"] .enchantment-link {
-    color: #39FF14;
+    color: #0000FF;
+    text-decoration: underline;
 }
+
 tw-story[tags~="browser"] tw-link:hover, tw-story[tags~="browser"] .enchantment-link:hover {
-    color: #808000;
-    border-bottom: none;
+    color: #0000FF;
+    text-decoration: underline dotted;
 }
 tw-story[tags~="browser"] tw-link:visited, tw-story[tags~="browser"] .enchantment-link:visited {
-    color: #808000;
+    color: #0000FF;
+    text-decoration: underline;
 }
 
 
