@@ -1,17 +1,27 @@
-:: Check console {"position":"300,600","size":"100,100"}
+:: Check console [browser]
 {
   (set: $shipInterior to "Ship Interior" + (string: $day))
 
 }
-{(if: $tabs is 1 and $day is 987)[
+{
+(set: $browserContentChanger to (css: "font-style: italic;"))
+(set: $currentBrowserTitle to (display: "day" + (string: $day) + "title_" + (string:$tabs)))
+(set: $currentBrowserContent to (display: "day" + (string: $day) + "_" + (string:$tabs)))
+(if: $tabs is 1 and $day is 987)[
       The console currently has $tabs tabs open.
 
-      <br>The foremost one shows (display: "day" + (string: $day) + "_" + (string:$tabs))
+      <br>The foremost one shows $currentBrowserTitle
+      <br>
+      <br>$browserContentChanger[$currentBrowserContent (if: $tarotdelivery is "ftl" or $tarotdelivery is "roboatelier" )[There is only one deck remaining.](else:)[There are only two decks remaining.]]
+    <br>  
+<br>[[Buy one->tarotbuy]]
       <br>[[Turn away from the console->$shipInterior]]
 ](elseif: $tabs > 0 and $preventclose is false)[
       Remaining tabs: $tabs
 
-      <br>The foremost tab shows (display: "day" + (string: $day) + "_" + (string:$tabs))
+      <br>The foremost tab shows $currentBrowserTitle
+      <br>  
+      <br>$browserContentChanger[$currentBrowserContent]
       <p>(link:"Close the tab")[(set: $tabs to $tabs-1)(goto: "Check console")]
       <br>[[Turn away from the console->$shipInterior]]
 ]
@@ -21,10 +31,10 @@
       <p>[[Turn away from the console->$shipInterior]]
 ]
 }
+:: day987title_4 
+an English translation of a Greek play.
 
 :: day987_4 [browser]
-an English translation of a Greek play:
-
 You may be king, but I do have the right   
 to answer you—and I control that right,
 for I am not your slave. I serve Apollo,
@@ -36,22 +46,27 @@ how miserable you are, or where you live,
 or who it is who shares your household.
 Do you know the family you come from?
 
-:: day987_3 [browser]
-an encyclopedia entry about chard:
+:: day987title_3 [browser]
+an encyclopedia entry about chard.
 
+:: day987_3 [browser]
 Beta vulgaris subsp. vulgaris, aka Chard or Swiss Chard is a green leafy vegetable. Highly prized in the 20th century for its beautiful leaves and incredible flavour and nutrition. It is still used frequently in cuisine, especially during spaceflight due to its tolerance for hydroponic growing methods.
 
 Some small amount of chard seeds survived microwave quarantine procedures and entered the atmosphere of planetoid Jignesh Delta-3. They rapidly colonised the planet which is now colloquially known as The Chard Sphere.
 
+:: day987title_2 [browser]
+a picture of a fighter jet, grounded and covered in graffiti and vegetation.
+
 :: day987_2 [browser]
-a picture of a fighter jet, grounded and covered in graffiti and vegetation. It's not clear when the photo was taken or how long the jet has been there. The picture is on a website that collects pictures of abandoned military aircraft and the description text contains hundreds of words about this specific jet, its history, how it crashed and how it came to be abandoned. You're used to objects being mass produced and fungible but this jet is uniquely identified with meticulous information about everything it has ever done. You consider that although the information isn't on this website, probably every flight this craft took is stored somewhere along with detailed records about its maintenance procedures and crew. Which makes it all the more eerie that it's now abandoned, sitting in a field somewhere, rotting, if metal can be said to rot. 
+It's not clear when the photo was taken or how long the jet has been there. The picture is on a website that collects pictures of abandoned military aircraft and the description text contains hundreds of words about this specific jet, its history, how it crashed and how it came to be abandoned. You're used to objects being mass produced and fungible but this jet is uniquely identified with meticulous information about everything it has ever done. You consider that although the information isn't on this website, probably every flight this craft took is stored somewhere along with detailed records about its maintenance procedures and crew. Which makes it all the more eerie that it's now abandoned, sitting in a field somewhere, rotting, if metal can be said to rot. 
+
+:: day987title_1 [browser]
+a tarot deck featuring the major arcana.
 
 :: day987_1 [browser]
-a tarot deck featuring the major arcana. The deck was created by an artist who works on a children's TV show about wordless, elaborately costumed human actors that navigate a simplified version of the universe, jumping fom shrunken planets and floating through the void of space until they arrive on other ones. Then singing and dancing and blinking their giant, neotenous eyes which you assume are controlled by robotic puppetry.
+The deck was created by an artist who works on a children's TV show about wordless, elaborately costumed human actors that navigate a simplified version of the universe, jumping fom shrunken planets and floating through the void of space until they arrive on other ones. Then singing and dancing and blinking their giant, neotenous eyes which you assume are controlled by robotic puppetry.
 
-The tarot deck itself doesn't look anything like the TV show, but the illustrations are youthful with strong linework and a sense of play. The deck can pair with any room projector to display common card meanings or even to do full interpretations of cards drawn. (if: $tarotdelivery is "ftl" or $tarotdelivery is "roboatelier" )[There is only one deck remaining.](else:)[There are only two decks remaining.
-
-[[Buy one->tarotbuy]]]
+The tarot deck itself doesn't look anything like the TV show, but the illustrations are youthful with strong linework and a sense of play. The deck can pair with any room projector to display common card meanings or even to do full interpretations of cards drawn. 
 
 :: tarotbuy [console]
 (set: $preventclose to false)(set: $tabs to $tabs-1)Select delivery service:
@@ -69,9 +84,10 @@ The tarot deck itself doesn't look anything like the TV show, but the illustrati
 
 [[Return->$shipInterior]]
 
-:: day988_4 [browser]
+:: day988title_4 [browser]
 a forum post about buying your own tarot deck. 
 
+:: day988_4 [browser]
 user ChopinItUp: Is it really bad luck to buy your own tarot deck?? I didn't know and I already bought myself one!
 
 user GreySeer: Sorry to say, but it really IS bad luck to buy your own tarot deck. I recommend you perform the cleansing ritual.
@@ -80,31 +96,36 @@ user Babouji B Hybrid: I think being forbidden from buying your own tarot deck i
 
 user NCISCriminalMinds: Only losers believe in luck.
 
-:: day988_3 [browser]
+:: day988title_3 [browser]
 an archived newsletter post.
 
+:: day988_3 [browser]
 So I asked myself, what's the best way to cleanse a tarot deck that has been despoiled by an autodidact? Someone who is out to meddle and scheme. Someone who doesn't understand universal ordering and instead turns to the tawdry methods of dunya? The answer came to me one afternoon whilst I was in the local konbini after 6pm, perusing a selection of near dated herbs; Burn some sage. 
 
-:: day988_2 [browser]
+:: day988title_2 [browser]
 a downloaded precautions manual for the life support systems of the PSV *Metallic Red*.
 
+:: day988_2 [browser]
 Under no circumstances should an open flame be present in the atmosphere created by the AhmedIncorporated ARD‑99 life support system. Any carbonised particulate will decrease the lifespan of the filtration and oxygen scrubbers. If an unexpected fire breaks out and you believe the system has been contaminated with particulate, please replace all filter consumables as a precaution and have an authorised AhmedIncorporated technician perform a full service as soon as possible.
 
-:: day988_1 [browser]
+:: day988title_1 [browser]
 an email from your father.
 
-Do you not think that I need you too? You chose to stay on your own, you chose to stay in that ship. What about me? What do I get to choose? Or do you just think I'm old now and it doesn't matter what I choose? 
+:: day988_1 [browser]
+Do you not think that I need you too? You chose to go on your own, you chose to stay in that ship. What about me? What do I get to choose? Or do you just think I'm old now and it doesn't matter what I choose? 
 
 You'll never be happy out there. I know it and you know it. You just think it's ok for me to be unhappy too.
 
-:: day989_4 [browser]
+:: day989title_4 [browser]
 an article about astrology.
 
+:: day989_4 [browser]
 It was believed that a human vessel was physically formed in the womb but did not contain a being until it took its first breath. Indeed, an ancient Greek word which could be taken to mean something equivalent to spirit, or soul, is *pneuma* which also means breath. At birth, the body inhaled the content of the universe at a point in space and time specific to its celestial configuration. So although every person's *pneuma* was formed of the same stuff that the universe is made of, the arrangement of that stuff is fixed on the body's first breath. It's that fixed alignment of ingredients which makes up each person's individual spirit and why it's possible to read the fate of that soul by studying the celestial realm.
 
-:: day989_3 [browser]
+:: day989title_3 [browser]
 a wellness page about the effects of spaceflight on the human body.
 
+:: day989_3 [browser]
 Space travel got you feelin' outta this world...but not in a good way?
 Here's the lowdown on how zero gravity throws your body outta whack:
 
@@ -114,81 +135,93 @@ Here's the lowdown on how zero gravity throws your body outta whack:
 
 3️⃣  REM Renaissance: Fluid shifts in the inner ear can result in a whole host of weird vibes, including loneliness and crazy dreams! Guard your mental health with calming scents and face masks.
 
-
-:: day989_2 [browser]
+:: day989title_2 [browser]
 a catalogue page for a jade figurine that looks identical to your own.
 
-The Jade Figurine was created by an unknown culture at an unknown time. The style of craftsmanship is common across multiple planets and several similar examples are held in institutional collections. The Jade Figurine is owned by Cazmedir Plantagenet as part of the Plantagenet Arts and Antiquities Archive. Due to the sensitive physical and geopolitical nature of much of the archive, it is not available for public viewing. If you are an institution or private collector interested in viewing any part of the Plantagenet Arts and Antinquities Archive, please send a secure request to our public liason.
+:: day989_2 [browser]
+The Jade Figurine was created by an unknown culture at an unknown time. The style of craftsmanship is common across multiple planets and several similar examples are held in institutional collections. The Jade Figurine is owned by Cazmedir Plantagenet as part of the Plantagenet Arts and Antiquities Archive. Due to the sensitive physical and geopolitical nature of much of the archive, it is not available for public viewing. If you are an institution or private collector interested in viewing any part of the Plantagenet Arts and Antinquities Archive,
+
+:: day989title_1 [browser]
+an online tool to help you calculate the amount of time you've been in space, allowing for variation due to 
 
 :: day989_1 [browser]
-an online tool to help you calculate the amount of time you've been in space, allowing for variation due to relativity.
-
 According to your uploaded ship's logs, you have been in space for 3987 hours (approx 165 Earth days)
 
-:: day990_3 [browser]
+:: day990title_3 [browser]
 an email from your friend Riaz.
 
+:: day990_3 [browser]
 Riaz's Coffee Shop is open this Sunday, day 995 local system. I've got two coffees from TRAPPIST-1d; one is a funky ultra high pressure ferment with almond and banana notes, the other a super clean laser washed catui that tastes like black tea with honey in it. They should be great. Hope to see you there!
 
 Riaz
 
-:: day990_2 [browser]
+:: day990title_2 [browser]
 a retrospective about a computer game series you've not played
 
+:: day990_2 [browser]
 In a medium that's technically capable of showing almost anything, situating many of the plot's key scenes off screen is an unorthodox choice. In an interview with Digital Recipe Magazine narrative designer Ian James Remnant stated that he chose to have key events be relayed by third parties to give players the same level of 
 disconnect as the player characters.
 
 "Players are so used to having agency, the ability to effect the world or control it. But when an event has already taken place and players only hear about it after the fact we begin to look at agency differently. No one can change the past, but we can use our agency to build a future."
 
-:: day990_2a [browser]
+:: day990title_2a [browser]
 an abstract from a scientific seeming paper about synthetic nutrition.
 
+:: day990_2a [browser]
 It is a safety requirement that all vessels capable of prolonged space travel have a functioning nutritional synthesiser on board. However, whilst all nutrisynths can indefinitely create substrate which fulfils all nutritional needs, there is growing doubt`*` in the community`**` about the long term risks of consuming substrate`***`. That's why we recommend the Palmyra range of of nutritional synthesisers from Aramco, featuring a proprietary silver ion antibacterial technology which no other brand can offer`****`. 
 
-:: day990_1 [browser]
-a picture of yourself from nine months ago. You're smiling, drinking something brightly coloured, but you look tired.
+:: day990title_1 [browser]
+a picture of yourself.
 
-:: day991_4 [browser]
+:: day990_1 [browser]
+The picture is from about 9 months ago You're smiling, drinking something brightly coloured, but you look tired.
+
+:: day991title_4 [browser]
 an encylopedia entry about refraction.
 
+:: day991_4 [browser]
 Refraction is the movement of waves as they pass through an opening or around an object. Refraction is the principle method used in X-Ray crystallography, which allows the determining of atomic and molecular properties of crystals. By measuring the angles and intensities of beams that have been diffracted, and comparing it to the original, unaltered path of the beam, conclusions can be drawn about the objects that the beam has passed through.
 
-:: day991_3 [browser]
+:: day991title_3 [browser]
 an email from your friend Riaz.
 
+:: day991_3 [browser]
 It's OK, I thought you might not be able to make it. I know you're out on your mission right now. Do you feel like it helps? Being alone in the expanse with nothing to do? I always think taking time off like that will help, but for me it never does so far as I'm aware. But then again maybe I've never really tried doing nothing. Something always appears to fill the time. I think you're doing the right thing though. I hope you get what you need.
 
 Take it easy.
 
-:: day991_2 [browser]
+:: day991title_2 [browser]
 an anthropological text about ritual.
 
+:: day991_2 [browser]
 There is evidence that their meanings were obscure to both officiant and congregation but the rituals were not systematic functions performed for external effect. Rather, they were intended to serve as transformative or transitional exercises which served to bring about a reconfiguration of the individual or individuals who took part in them. This is in contrast with doctrinal religions, which hinge on practices with clearer semiotic meaning and definite outcomes. Doctrinal religions rely on faith in the teachings and beliefs of the doctrine. In ritualistic religions, ritual is more important than faith.
 
-:: day991_1 [browser]
+:: day991title_1 [browser]
 an online playlist called Don't Be So Dramatic.
 
+:: day991_1 [browser]
 The stat counter on the page says that you have listened to the playlist 249 times in the last year.
 
-:: day992_4 [browser]
+:: day992title_4 [browser]
 A comment from a contractor who worked on building a colony on an uninhabited planet.
 
+:: day992_4 [browser]
 The scariest part is establishing the initial landing and setting up the tether for the orbital lift, after that it's nothing mind blowing. You can oversee almost all of the tunnel drilling remotely and the drills themselves are pretty smart these days. Sometimes something will need a repair that you have to commute to planetside to perfom but the tunnel complex will be airlocked and holding atmosphere by then so the risks are minimal. If you enjoy technical challenges and can cope with the loneliness and don't mind the hours then it's a solid job and I recommend it. 
 
-:: day992_3 [browser]
+:: day992title_3 [browser]
 a review of one of the films you were watching.
 
+:: day992_3 [browser]
 The result is a film wherein all the characters find themselves tied up, confused. Presented with false information they cannot separate from the truth, partially because it is indistinguishable, but partially because the lies that it presents are the same ones that are essential to their continued functioning in the world, professionally and personally. When presented with two identical doors, with two identical sphinx telling you two contradicting lies about what are behind each, who wouldn't pick the lie that invokes a more liveable world? It is the decisions that these characters are forced to make that would propel the film forward for its first half, were it not for the script's lack of any recognisable model of human psychology. 
 
+:: day992title_2 [browser]
+a star map.
+
 :: day992_2 [browser]
-a star map showing which planets in the local system are inhabited.
+The map shows which planets in the local system are inhabited. A few of them have minor industrial colonies but the current local system is predominantly empty. 
 
-A few of them have minor industrial colonies but the current local system is predominantly empty. 
-
-
-:: day992_1 [browser] 
+:: day992title_1 [browser] 
 a reply to a comment thread on a music video that you were listening to.
 
+:: day992_1 [browser] 
 CheepiePie: They didn't ban augury because it was unislamic, they banned it because they thought it was effective and in the hands of the common population it could destabilise the state. It's hard for any of us to understand after hundreds of years of materialist philosophy, but to these people divination was as real and believable a science as any other.
-
-LocalWords:  neotenous

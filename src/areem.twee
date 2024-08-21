@@ -9,7 +9,21 @@
 
 When he lets go he looks you up and down.
 
-"You look terrible, if you don't mind me saying. But I have the cure: Labour. Would you like a task assigned to you, my fellow initiate?"
+"You look terrible, if you don't mind me saying. What are you doing here?"
+
+[["I had to come back to sort something out."->Areem conversation 1a]]
+
+:: Areem conversation 1a
+"Something that couldn't have been sorted out via FTL post and email? I find that hard to believe."
+
+[["There are some things that have to be done in person, aren't there?"->Areem conversation 1b]]
+
+:: Areem conversation 1b
+"I don't thing so, but you seem convinced that there are. Or somebody else convinced you that there are. You wouldn't be there otherwise."
+
+You shrug.
+
+"Nevertheless, you're here now so I offer you the most noble and profound gift that I can: Meaningful labour. Would you like a task assigned to you, my fellow initiate?"
 
 [["Yes please."->Areem conversation 2]]
 [["If there's anything I can help with."->Areem conversation 2]]
@@ -24,7 +38,7 @@ Areem moves his gaze toward the shelving above his worktop. He pulls a large met
 :: Areem conversation 3
 Before you can touch your ingredients Areem returns with a stick blender that looks like a modernist assault rifle.
 
-"Someone left it in the fridge." he says, wiggling his eyebrows. "Could you do the dressing for the salad? 500ml should be enough. "
+"Someone left it in the fridge." he says. "Could you do the dressing for the salad? 500ml should be enough. "
 
 He revs the blender a couple of times to check it works, then leaves it on the worktop, winks at you, and leaves.
 
