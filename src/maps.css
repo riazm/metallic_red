@@ -169,6 +169,7 @@ tw-icon {
 
 .item {
     text-align: center;
+    font-variant: small-caps;
 }
 
 /* deletable */
