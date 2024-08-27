@@ -8,7 +8,7 @@
 :: receive delivery tarot [terminal]
 (if: $tarotdelivery is "ftl")[Local system mass driver Antigone-B1 is preparing to send your parcel... (live: 1s)[Ready(stop:)]
 Payload launch... (live: 3s)[Success(stop:)]
-Trajectory Check... (live:4.5s)[OK(stop:)]
+Trajectory check... (live:4.5s)[OK(stop:)]
 Payload arrival... (live: 5s)[[7.34s]<eta|(stop:)] {
 (live: 7s)[
        (replace: ?eta)[5.49s]

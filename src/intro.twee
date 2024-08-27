@@ -46,15 +46,8 @@ Metallic Red
 }
 
 :: menu screen [title]
-<img src="metallic_red_images/metallictarot1.jpg" class=center>
-
-Metallic Red v0.02
-
-[[Start->before playing]]
-
-[[Chapter Select]]
-
-[[Credits]]
+<img src="metallic_red_images/metallictarot2.jpg" class=center>
+<p class=menu-text>[[Start->before playing]] • [[Chapter Select]] • [[Credits]]</p>  
 
 :: before playing
 Hello! Thank you for playing the early version of my game!
@@ -72,19 +65,14 @@ Hello! Thank you for playing the early version of my game!
 :: Chapter Select
 Click to start on a different day.
 
-Ship
 (link: "Day 987")[(goto: "Ship Interior987")]
 (link: "Day 988")[(set: $tabs to 4)(set: $day to 987)(display: "morning")(goto: "Ship Interior988")]
-(link: "Day 989")[(set: $tabs to 3)(set: $day to 988)(display: "morning")(goto: "Ship Interior989")]
+(link: "Day 989")[(set: $tabs to 3)(set: $day to 988)(set: $tarotdelivery to "ftl")(display: "morning")(goto: "Ship Interior989")]
 (link: "Day 990")[(set: $tabs to 3)(set: $day to 989)(display: "morning")(goto: "Ship Interior990")]
 (link: "Day 991")[(set: $tabs to 3)(set: $day to 990)(display: "morning")(goto: "Ship Interior991")]
 (link: "Day 992")[(set: $tabs to 3)(set: $day to 991)(display: "morning")(goto: "Ship Interior992")]
-
-Site
 [[Day 993->site arrival]]
-[[Lobby]]
 (link: "Day 994")[(set: $siteState to "morning")(set: $kitchenState to "quietMorning")(set: $diningState to "morning")(goto:"Dormitory")]
-[[Salad Dressing->Dressing intro]]
 
 
 :: ideas

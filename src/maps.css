@@ -26,6 +26,18 @@ tw-link
     color:#D90429;
 }
 
+/* title page */
+tw-story[tags~="title"], tw-story[tags~="title"]{
+    background-color: #161616
+}
+
+tw-passage img {
+    max-width: 100%;
+	  display: block;
+	  margin: 0 auto;
+}
+
+
 /* the browser effect used for the ship's console type thing */
 tw-story[tags~="browser"] {
   font-family: "Times New Roman", Times, serif;
@@ -123,6 +135,11 @@ tw-icon {
   padding: 10px;
 }
 
+.menu-text {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
 
 /* uncomment this to hide the undo redo buttons */
 /* tw-sidebar tw-icon[title*="undo" i], */
