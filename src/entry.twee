@@ -22,7 +22,7 @@ The overall effect is pleasing and the new feeling of spaciousness energises you
 [[Activate the gravity pad and robo ping pong->pingpong]]](else:)[(if: $eatingpaste is 0)[(set: $eatingpaste to 1)You fill a pouch with paste from the nutrisynth and sip at it absent mindedly to recover from your workout]
 
 (if: $checkhydro is 1)[(display: "hydro blue")
-](if: $tabs > 0)[There's a [[red light->Check console]] blinking on a display up ahead](if: ($checkhydro + $tabs) is 0)[You're tired from your workout and don't feel like staying up anymore.
+](if: $tabs > 0)[There's a [[red light->Check console]] blinking on a display up ahead](if: ($checkhydro + $tabs) is 0)[You're tired and there's nothing else todo except go to bed.
 
 [[Go to sleep->sleep intro]].
 ]]

@@ -24,7 +24,7 @@ In the dream this is just how tall a pylon is and always has been, but if pylons
 
 :: sleep987_2 [sleep]
 {(set: $tabs to 4)
-(display: "morning")}The pylon itself is not electrified, and there is no danger from touching it, but as you reach out your hand towards one of the steel cross beams you feel as though a charge is building in the air around you. Your hair begins to stand up, and you hear a humming, with great trepidation the very tip of your finger touches the [[pylon->awaken 987]].
+(display: "morning")}The pylon itself is not electrified and there is no danger from touching it, but as you reach your hand towards one of the steel cross beams you feel as though a charge is building in the air around you. Your hair begins to stand up and you hear a low frequency vibration in the air. Your phone is ringing. You check the screen and see that the call is coming from your father. You put the phone away and try to will it to stop ringing. With great trepidation the very tip of your finger touches the [[pylon->awaken 987]].
 
 :: awaken 987
 You wake with a jolt.

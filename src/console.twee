@@ -5,9 +5,9 @@
 }
 {
 (set: $browserContentChanger to (css: "font-style: italic;"))
+(if: $tabs is 1 and $day is 987)[
 (set: $currentBrowserTitle to (display: "day" + (string: $day) + "title_" + (string:$tabs)))
 (set: $currentBrowserContent to (display: "day" + (string: $day) + "_" + (string:$tabs)))
-(if: $tabs is 1 and $day is 987)[
       Remaining tabs: $tabs
 
       <br>The foremost one shows $currentBrowserTitle
@@ -17,6 +17,8 @@
 <br>[[Buy one->tarotbuy]]
       <br>[[Turn away from the console->$shipInterior]]
 ](elseif: $tabs > 0 and $preventclose is false)[
+(set: $currentBrowserTitle to (display: "day" + (string: $day) + "title_" + (string:$tabs)))
+(set: $currentBrowserContent to (display: "day" + (string: $day) + "_" + (string:$tabs)))
       Remaining tabs: $tabs
 
       <br>The foremost tab shows $currentBrowserTitle
@@ -26,7 +28,7 @@
       <br>[[Turn away from the console->$shipInterior]]
 ]
 (else:)[
-      There are no tabs remaining on the console.
+      There are no tabs remaining on the console.(if: $day is 988)[ You notice your lower lip is trembling slightly and clench your teeth to steady it.]
 
       <p>[[Turn away from the console->$shipInterior]]
 ]
@@ -112,7 +114,7 @@ Under no circumstances should an open flame be present in the atmosphere created
 an email from your father.
 
 :: day988_1 [browser]
-Do you not think that I need you too? You chose to go on your own, you chose to stay in that ship. What about me? What do I get to choose? Or do you just think I'm old now and it doesn't matter what I choose? 
+Do you not think that I need you too? You chose to go on your own, you chose to stay on that ship. What about me? What do I get to choose? Or do you just think I'm old now and it doesn't matter what I choose? 
 
 You'll never be happy out there. I know it and you know it. You just think it's ok for me to be unhappy too.
 

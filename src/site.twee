@@ -4,7 +4,7 @@
 (set: $location to "Lobby")
 (set: $westText to "Upper Landing")
 (set: $southText to "")
-}(if: $siteState is 0)[(set: $siteState to "preDinner")]You're at the entrance to the site, like the tunnel you followed to get here it has been mechanically carved out of solid rock, but it's larger and rectangular. The floor is solid. A row of robes identical to the one you're wearing are hung from the wall.
+}(if: $siteState is 0)[(set: $siteState to "preDinner")]You're at the entrance to the site, like the tunnel you followed to get here it has been mechanically carved out of solid rock, but it's larger and rectangular. The floor is solid and the walls have been painted. A row of robes identical to the one you're wearing are hung from the wall.(if: not ((history:) contains (passage:)'s name))[]
 
 :: Recreational
 {(set: $northText to "Dormitory")
@@ -12,7 +12,7 @@
 (set: $location to "Recreational")
 (set: $westText to "Gym")
 (set: $southText to "Lobby")
-}You're inside the main living quarters on site. There's a large bookshelf against the wall and a few consoles with display units. The rest of the room is taken up by some communal floor couches finished in a plain grey fabric.(if: not ((history:) contains (passage:)'s name))[ The volumes on the bookshelf are mostly either practical technical manuals or more esoteric volumes. There are a few books of spiritual poetry, but no fiction to speak of.]
+}You're inside the main living quarters on site. There's a large bookshelf against the wall and a few consoles with display units. The rest of the room is taken up by some communal floor couches finished in a plain grey fabric.(if: not ((history:) contains (passage:)'s name))[ The volumes on the bookshelf are mostly practical technical manuals related to the running of the site or more esoteric volumes. Titles about orbital symbolism, refractive divination, absence studies. There are a few books of spiritual poetry, but no fiction whatsoever.]
 
 (if: $siteState is "preDinner")[A pair of younger initiates are gathered around one of the display units.(display: "site conversation display")](if: $siteState is "postDinner")[Groups of initiates who don't want to go to sleep are lying on some of the couches, talking.(display: "site conversation display")](if: $siteState is "morning")[There's nobody here.](if: (history:) contains "Laurel conversation 2")[(set: $laurelConvo to 1)](else:)[(set: $laurelConvo to 0)](if: $exploredNorth + $exploredDining + $exploredGym + $exploredUnderground is 4 and $laurelConvo is 0)[
 
@@ -29,8 +29,7 @@ You're examining the bookshelf when you hear a shuffling behind you. It's the in
 (set: $westText to "")
 (set: $southText to "Recreational")
 
-
-(set: $exploredNorth to 1)}There are several bunk beds here. (if: $siteState is "morning")[Clearly you're the last person to wake up, all of the other beds have been made and tidied.](if: $siteState is "preDinner")[They all share identical sheets, duvets and pillow covers in the same coarse weave and off white shade.(if: not ((history:) contains (passage:)'s name))[ Some have a dent in the pillow indicating that they are occupied, but most look indistinguishable. No one has tried to customise their bunk with photos of family or any other keepsakes.](display: "site conversation display")](else-if: $siteState is "postDinner")[The room has filled up, people are slouching around in their night clothes, carrying their toiletries and getting ready for bed. There's a robed initiate lying on one of the bunks reading. They give you a slow, kingly nod when you walk in and then go back to their book.
+(set: $exploredNorth to 1)}There are several bunk beds here. (if: $siteState is "morning")[Clearly you're the last person to wake up, all of the other beds have been made and tidied.](if: $siteState is "preDinner")[They all share identical sheets, duvets and pillow covers in the same coarse weave and off white shade.(if: not ((history:) contains (passage:)'s name))[ Some have a dent in the pillow indicating that they are occupied, but most look indistinguishable. No one staying on the site has tried to customise their bunk with photos of family or any other keepsakes. Something that you didn't notice when you were last here.](display: "site conversation display")](else-if: $siteState is "postDinner")[The room has filled up, people are slouching around in their night clothes, carrying their toiletries and getting ready for bed. There's a robed initiate lying on one of the bunks reading. They give you a slow, kingly nod when you walk in and then go back to their book.
 
 The bunk you used to sleep in is free.
 
