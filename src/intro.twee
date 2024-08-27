@@ -46,8 +46,7 @@ Metallic Red
 }
 
 :: menu screen [title]
-<img src="metallic_red_images/metallictarot2.jpg" class=center>
-<p class=menu-text>[[Start->before playing]] • [[Chapter Select]] • [[Credits]]</p>  
+<img src="metallic_red_images/metallictarot2.jpg" class=center><p class=menu-text>[[Start->before playing]] • [[Chapter Select]] • [[Credits]]</p>  
 
 :: before playing
 Hello! Thank you for playing the early version of my game!
@@ -74,7 +73,21 @@ Click to start on a different day.
 [[Day 993->site arrival]]
 (link: "Day 994")[(set: $siteState to "morning")(set: $kitchenState to "quietMorning")(set: $diningState to "morning")(goto:"Dormitory")]
 
+[[Return->menu screen]]
+    
+:: Credits [title]
+A game by <a href="http://riazmoola.com">Riaz Moola</a>, part of the Perndemonium series.
 
+Menu graphic by <a href="https://www.instagram.com/dainkaplan/"">Dain Kaplan</a>.
+
+Sincere appreciation and thanks to alpha testers Gretel, JP and Annja.
+
+Please report any issues to theongoingrealityshow@gmail.com
+
+Thank you for playing my game.  
+    
+[[Return->menu screen]]
+        
 :: ideas
 Early on add more stuff about the ship, introduce the nutrisynth and the hydroponics station
 an email from your friend pernilla saying she's never felt like she was out of control in that way
@@ -99,21 +112,20 @@ Overheard conversation about getting angry with something.
 
 <!--Add -(append: ?Sidebar)[hook to get this to to load the east/north/south/west/ text into the sidebar, if we so wish to do so-->
 
-:: Sidebarload [footer]
-
+:: compass [compass]
 {
 (set: $unexploredChanger to (css: "font-style: italic;"))
-<div class="center">
+<div class="compass">
 <div class="container">
   <div class="item"></div>
   <div class="item">
-    (if: $northText is not "")[
-         (if: (visited: $northText))[
-            [[$northText]]
-         ](else:)[
-            $unexploredChanger[[[$northText]]]
-         ]
-    ]
+        (if: $northText is not "")[
+             (if: (visited: $northText))[
+                [[$northText]]
+             ](else:)[
+                $unexploredChanger[[[$northText]]]
+             ]
+        ]
   </div>  
   <div class="item"></div>
   <div class="item">

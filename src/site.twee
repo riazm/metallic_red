@@ -6,6 +6,8 @@
 (set: $southText to "")
 }(if: $siteState is 0)[(set: $siteState to "preDinner")]You're at the entrance to the site, like the tunnel you followed to get here it has been mechanically carved out of solid rock, but it's larger and rectangular. The floor is solid and the walls have been painted. A row of robes identical to the one you're wearing are hung from the wall.(if: not ((history:) contains (passage:)'s name))[]
 
+(display: "compass")
+
 :: Recreational
 {(set: $northText to "Dormitory")
 (set: $eastText to "Hydroponics")
@@ -21,6 +23,7 @@ You're examining the bookshelf when you hear a shuffling behind you. It's the in
 [["Is the hierophant ready to see me?"->Laurel conversation 1]]
 [["When can I enter the great hall?"->Laurel conversation 1]]]
 
+(display: "compass")
 
 :: Dormitory
 {(set: $northText to "")
@@ -34,6 +37,8 @@ You're examining the bookshelf when you hear a shuffling behind you. It's the in
 The bunk you used to sleep in is free.
 
 [[Go to bed->sleep site]]]
+
+(display: "compass")
 
 :: Hydroponics
 {(set: $northText to "Workshop")
@@ -51,6 +56,7 @@ The lights have been turned low to simulate night. You can hear a faint gurgle a
 
 The lights seem even brighter than they did yesterday.]
 
+(display: "compass")
 
 :: Workshop
 {(set: $northText to "")
@@ -60,6 +66,8 @@ The lights seem even brighter than they did yesterday.]
 (set: $southText to "Hydroponics")
 
 }You're inside the workshops. The room is filled with fabricators and roboateliers sitting neatly on workbenches. Tools are obsessively organised on gridded pegboards stuck to the bare cave walls. There are smaller hatches leading from the room used by the maintenance crabs.(if: $siteState is "preDinner")[(display: "site conversation display")]
+
+(display: "compass")
 
 :: Kitchen
 {(set: $northText to "Dining")
@@ -76,6 +84,8 @@ Your old friend Areem is here, stirring a pan of onions.
 You recognise Areem, the head chef but they don't notice you as they're helping someone learn how to dice an onion.](else-if: $kitchenState is "serveDressing")[
 
 The bowl of (link: "salad dressing")[(set: $kitchenState to "gotDressing")(goto: "Kitchen pickup")] you made is here.(set: $diningState to "serveDressing")]
+
+(display: "compass")
 
 :: Kitchen pickup
 You pickup the bowl of dressing.
@@ -95,6 +105,8 @@ With your hands now empty you see little else to do except sit down. Several gro
 
 [[Eat the cherry->Dining intro]]]](else-if: $diningState is "kitchenShift")[The room has largely emptied, the only table still lively is the one with the cooking shift, who are just getting started on the remains of the first course.](else-if: $diningState is "morning")[The dining room is empty. You must have slept through breakfast because everything has been put away.](else:)[There are several large metal tables with benches in the dining room, but the lights are off. Dinner probably won't be served for a little while.](set: $exploredDining to 1)
 
+(display: "compass")
+
 :: Gym
 {(set: $northText to "")
 (set: $eastText to "Recreational")
@@ -104,7 +116,7 @@ With your hands now empty you see little else to do except sit down. Several gro
 
 (if: $siteState is "preDinner")[Someone you don't recognise is spinning out a leisurely pace on a stationary bike whilst watching a video that shows a lot of mountainous scenery from an uninhabited planet.(display: "site conversation display")](else-if: $siteState is "postDinner")[Someone is doing a slow yoga routine to prepare for bed. They look very graceful.](else:)[The room is completely empty. All the equipment is tidied away.]
 
-
+(display: "compass")
 
 :: Upper Landing
 {(set: $northText to "")
@@ -117,12 +129,16 @@ With your hands now empty you see little else to do except sit down. Several gro
 
 The floor has been freshly mopped by one of the cleaning robots.]
 
+(display: "compass")
+
 :: Staircase
 {(set: $northText to "Upper Landing")
 (set: $eastText to "")
 (set: $location to "Staircase")
 (set: $westText to "")
 (set: $southText to "Lower Corridor")}You're in a dark staircase. The steps themselves have been cut out of the rock directly and polished smooth. (if: $siteState is "morning")[](else:)[The ceiling is quite low and you feel at permanent risk of bumping into it.]
+
+(display: "compass")
 
 :: Lower Corridor
 {(set: $northText to "Staircase")
@@ -133,12 +149,16 @@ The floor has been freshly mopped by one of the cleaning robots.]
 
 To the North there are double doors set in a huge arch. To the East is a normal sized door. (if: $siteState is "preDinner")[In the darkness you can see a crack of light shining underneath the door to the east.](if: $siteState is "morning")[You can vaguely hear sound and commotion coming from inside the Great Hall]
 
+(display: "compass")
+
 :: Great Hall
 {(set: $northText to "Lower Corridor")
 (set: $eastText to "")
 (set: $location to "Great Hall")
 (set: $westText to "")
 (set: $southText to "")}(if: $siteState is "morning")[You can hear the noise of a communal meeting happening in the Great Hall. Presumably that's where everyone is this morning.](else:)[Each one of the double doors is wider than you are tall and suspended on huge hinges. There's a bolt across both of them which is locked in place.]
+
+(display: "compass")
 
 :: Hierophant's Chambers
 {(set: $northText to "")
@@ -149,3 +169,4 @@ To the North there are double doors set in a huge arch. To the East is a normal 
 
 [[Knock->Hierophant 1]]]
 
+(display: "compass")

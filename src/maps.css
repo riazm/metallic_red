@@ -128,7 +128,12 @@ tw-icon {
   padding-right: 0.75em;
 }
 
-/* use this to center the "compass" */
+
+.text-container {
+  display: flex;
+  align-items: center; /* Adjust this to your desired alignment */
+}
+
 .center {
   margin: auto;
   width: 60%;
@@ -149,12 +154,21 @@ tw-icon {
 
 .container {
   display: grid;
-  grid-template-rows: 100px 100px 100px;
-  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: auto;
+  grid-template-columns: 33% 33% 33%;
+  align-items:center; 
+}
+
+/* use this to center the "compass" */
+.compass {
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  vertical-align: middle;
 }
 
 .item {
-  text-align: center;
+    text-align: center;
 }
 
 /* deletable */
