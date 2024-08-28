@@ -1,0 +1,74 @@
+:: conversations test
+(debug:)(display: "site conversation display")
+
+[[conversations test]]
+
+:: site description display
+{
+(if: $descriptions is not an array)[
+     (set: $descriptions to (a: "responsibility", "steering", "whiteboard", "movement", "owl", "change", "robotics", "laurel"))
+(set: $convCounter to 1)]
+
+(set: $convChance to (random: 1,4))}(if: $convChance is 1 and $convCounter > 0)[
+
+(display: "site description " + (nth: $convCounter, ...$descriptions)){
+(set: $convCounter to $convCounter + 1)
+(if: $convCounter > $descriptions's length)[
+     (set: $convCounter to 0)
+]
+}]
+
+:: site description responsibility
+You overhear a voice saying:
+
+"I'm responsible for getting into that state, I'll take responsibility for what happens when I'm in that state. But I want to know, just for my own sake, which part of me is it that comes out then?"
+
+:: site description steering
+An initiate nearby is writing something in big letters on a piece of paper.
+
+I'M STEERING THE HORSE WHERE THE HORSE WANTS TO GO
+
+:: site description whiteboard
+An initiate crossing the room mutters to a friend.
+
+"All I ever do is evaluate, modify, experiment, repeat."
+
+:: site description movement
+An initiate on a video call in the corner says:
+
+"Spending time trapped makes you relish movement, even if you don't know where you're going."
+
+:: site description owl
+A younger initiate is talking to an older one.
+
+"I saw an owl in daylight, on a branch. I pointed at it."
+
+"And how did it react?"
+
+"It flew away."
+
+The older initiate nods.
+
+"We will cover this in our next session on augury."
+
+:: site description change
+An initiate walks past chanting to himself.
+
+"I can't change things. I don't want to change things. I must change things. I can't change things. I don't want to change things. I must change things."
+
+:: site description robotics
+Two initiates are carrying a heavy maintenance robot between them.
+
+"If the robots switch off again next month I don't know what I'll do. I don't want to have to sweep again."
+
+"I would rather sweep than have to do a maintenance shift on these things."
+
+:: site description laurel
+The initiate with the laurel tattoo is talking to another initiate you feel like you might recognise but can't quite place.
+
+"It doesn't have to make sense. Things that make sense can tell us about how a human should be, but things that don't make sense can tell us about the experience of being a human."
+
+:: site description older
+One of the more senior initiates recognises you and starts to make small talk. It doesn't take long before they ask you about your father.
+
+"He's fine," you say. "I should probably get going though. I've got to check on something."

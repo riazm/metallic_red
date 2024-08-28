@@ -32,9 +32,11 @@ tw-story[tags~="title"], tw-story[tags~="title"]{
 }
 
 tw-passage img {
-    max-width: 100%;
+      height: 80vh;
+      width: 100%;
+      object-fit: contain;
 	  display: block;
-	  margin: 0 auto;
+	  margin: 0;
 }
 
 
@@ -129,15 +131,9 @@ tw-icon {
 }
 
 
-.text-container {
-  display: flex;
-  align-items: center; /* Adjust this to your desired alignment */
-}
-
 .center {
   margin: auto;
-  width: 60%;
-  padding: 10px;
+  width: 100%;
 }
 
 .menu-text {
@@ -147,10 +143,10 @@ tw-icon {
 }
 
 /* uncomment this to hide the undo redo buttons */
-/* tw-sidebar tw-icon[title*="undo" i], */
-/* tw-sidebar tw-icon[title*="redo" i] { */
-/*   display: none; */
-/* } */
+tw-sidebar tw-icon[title*="undo" i],
+tw-sidebar tw-icon[title*="redo" i] {
+  display: none;
+}
 
 .container {
   display: grid;

@@ -48,18 +48,8 @@ Metallic Red
 :: menu screen [title]
 <img src="metallic_red_images/metallictarot2.jpg" class=center><p class=menu-text>[[Start->before playing]] • [[Chapter Select]] • [[Credits]]</p>  
 
-:: before playing
-Hello! Thank you for playing the early version of my game!
-
-- There's no way to lose the game, and there's no gatekept content, so don't worry whilst playing, if you get stuck please let me know as it's probably a bug.
-
-- Similarly if you get to a point where you are really aware you're playing a game and you're just hammering links without reading things, let me know when this happened so I can check out the pacing.
-
-- If there's any obvious problems like typos, bugs, passages not making sense etc I would also like to know.
-
-- There's a tiny google forms survey at the end where I try to extract a bit more information from you, it would be useful if you filled me in!
-
-[[Begin->Ship Interior987]]
+:: before playing [title]
+(live: 1s)[(go-to: "Ship Interior987")]    
 
 :: Chapter Select
 Click to start on a different day.
