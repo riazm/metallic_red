@@ -101,7 +101,7 @@ Outside the Hierophant's office you can still hear the sound of the meeting happ
 :: Hierophant 13
 As you wait for the elevator to run its decontamination cycle a wave of panic rolls through you. Your hand reflexively reaches to pat the secure pocket on your chest but it's empty and it takes you a moment to remember why. 
 
-The elevator airlock slides open and you climb in, ready to return to [[The *Metallic Red*->End Survey]].
+The elevator airlock slides open and you climb in, ready to return to [[The *Metallic Red*->End]].
 
 :: End
 (live: 5s)[(go-to: "menu screen")]
